@@ -30,7 +30,7 @@ const SoftSkill = () => {
         </Flex>
         <Flex align="center" gap='1rem'>
           <FaChalkboardTeacher color="gray.500" boxSize={5} mr={2} />
-          <Text fontWeight="medium">Mentoría y formación de equipos</Text>
+          <Text fontWeight="medium">Facilidad de adaptación</Text>
         </Flex>
         <Flex align="center" gap='1rem'>
           <FaHandshake color="gray.500" boxSize={5} mr={2} />
