@@ -93,7 +93,8 @@ const CardProject = (props) => {
               bg="#09aeba"
               mx="4"
               mt="1.5"
-              _hover={{ bg: "#0e8e9c", color: "#2D3748" }}
+              bgGradient="linear(to-b, #1f7780, #0f7c7f)"
+              _hover={{ bgGradient: "linear(to-b, #105a69, #0f7c7f, #1f7780)" }}
               borderColor="#2D3748"
               boxShadow="2px 2px 10px rgba(0, 0, 0, 0.5)"
               fontSize='15px'

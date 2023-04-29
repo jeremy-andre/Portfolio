@@ -20,26 +20,26 @@ const SoftSkill = () => {
         p="1rem"
         gap="1rem"
       >
-        <Flex align="center" gap='1rem'>
-          <FaUsers color="gray.500" boxSize={5} mr={2} />
+        <Flex align="center" gap="1rem">
+          <FaUsers color="#09aeba" boxSize={5} mr={2} />
           <Text fontWeight="medium">Trabajo en equipo</Text>
         </Flex>
-        <Flex align="center" gap='1rem'>
-          <FaTasks color="gray.500" boxSize={5} mr={2} />
-          <Text fontWeight="medium">Gestión de proyectos</Text>
-        </Flex>
-        <Flex align="center" gap='1rem'>
-          <FaChalkboardTeacher color="gray.500" boxSize={5} mr={2} />
+        <Flex align="center" gap="1rem">
+          <FaChalkboardTeacher color="#09aeba" boxSize={5} mr={2} />
           <Text fontWeight="medium">Facilidad de adaptación</Text>
         </Flex>
-        <Flex align="center" gap='1rem'>
-          <FaHandshake color="gray.500" boxSize={5} mr={2} />
+        <Flex align="center" gap="1rem">
+          <FaTasks color="#09aeba" boxSize={5} mr={2} />
+          <Text fontWeight="medium">Gestión de proyectos</Text>
+        </Flex>
+        <Flex align="center" gap="1rem">
+          <FaHandshake color="#09aeba" boxSize={5} mr={2} />
           <Text fontWeight="medium">
             Negociación y resolución de conflictos
           </Text>
         </Flex>
-        <Flex align="center" gap='1rem'>
-          <FaRegSmile color="gray.500" boxSize={5} mr={2} />
+        <Flex align="center" gap="1rem">
+          <FaRegSmile color="#09aeba" boxSize={5} mr={2} />
           <Text fontWeight="medium">Comunicación efectiva</Text>
         </Flex>
       </Flex>

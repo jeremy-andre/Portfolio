@@ -200,14 +200,14 @@ const NavBar = ({ to }) => {
               <CiLinkedin color="#0077B5" size="2rem" />
             </motion.div>
           </a>
-          <a href="https://github.com/Jeremy23a" target="blank">
+          <a href="https://github.com/jeremy-andre" target="blank">
             <motion.div whileHover={{ scale: 1.3 }}>
               <DiGithubBadge size="2rem" />
             </motion.div>
           </a>
           <a href="mailto:jeremy.andre.99@gmail.com">
             <motion.div whileHover={{ scale: 1.3 }}>
-              <CiMail color="#f7dc6f" size="2rem" />
+              <CiMail color="#09aeba" size="2rem" />
             </motion.div>
           </a>
         </Flex>
