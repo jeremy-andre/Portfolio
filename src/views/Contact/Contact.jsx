@@ -64,7 +64,7 @@ const Contact = () => {
           gap="2rem"
           h='100vh'
           position='fixed'
-        >
+        > 
           <Flex direction="row" fontSize="2rem">
             {"CONTACTAME".split("").map((letter, index) => (
               <MovingComponent
