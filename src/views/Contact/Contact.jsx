@@ -63,6 +63,7 @@ const Contact = () => {
           justify="center"
           gap="2rem"
           h='100vh'
+          pb="5rem"
           position='fixed'
         > 
           <Flex direction="row" fontSize="2rem">
