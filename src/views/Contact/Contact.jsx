@@ -55,8 +55,8 @@ const Contact = () => {
       </Flex>
 
       {/*-MOVIL-------------------------------------------------------------*/}
-      
-      <Center h="100vh">
+
+      <Flex align="center" justify="center" h='100vh' bg='blue' >
         <Flex
           display={{ base: "flex", md: "none" }}
           direction="column"
@@ -104,7 +104,7 @@ const Contact = () => {
             </Box>
           </Flex>
         </Flex>
-      </Center>
+      </Flex>
     </Box>
   );
 };
