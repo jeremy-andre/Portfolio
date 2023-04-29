@@ -76,10 +76,11 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 4 }}
         >
-          <Box w="15rem" h="22rem" borderRadius="0.2rem">
+          <Box w="15rem" h="20rem" borderRadius="0.2rem">
             <Image
               w="100%"
               h="100%"
+              objectFit='cover'
               src="https://bit.ly/dan-abramov"
               alt="Dan Abramov"
             />
