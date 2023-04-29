@@ -8,7 +8,6 @@ const Home = () => {
       <Flex
         display={{ base: "none", md: "flex" }}
         direction="row"
-        p="2rem"
         w="70rem"
         // bg="blue"
         justify="space-between"
@@ -76,7 +75,7 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 4 }}
         >
-          <Box w="15rem" h="22rem" borderRadius="0.2rem">
+          <Box w="14rem" h="22rem" borderRadius="0.2rem">
             <Image
               w="100%"
               h="100%"
