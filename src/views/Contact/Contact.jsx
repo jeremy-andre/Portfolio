@@ -5,12 +5,14 @@ import { MovingComponent } from "react-moving-text";
 
 const Contact = () => {
   return (
-    <Box w="100%" color="white" h="100vh" justify="center" align="center" >
+    <Box color="white" >
       <Flex
         display={{ base: "none", md: "flex" }}
         direction="column"
+        align="center"
         gap="2rem"
-        h="100%"
+        justify="center"
+        h="100vh"
       >
         <Flex direction="row" fontSize="3rem">
           {"CONTACTAME".split("").map((letter, index) => (
@@ -60,7 +62,7 @@ const Contact = () => {
         align="center"
         justify="center"
         gap="2rem"
-        h="100%"
+        h="100vh"
       >
         <Flex direction="row" fontSize="2rem">
           {"CONTACTAME".split("").map((letter, index) => (
