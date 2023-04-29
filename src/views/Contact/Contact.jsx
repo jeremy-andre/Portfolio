@@ -5,13 +5,11 @@ import { MovingComponent } from "react-moving-text";
 
 const Contact = () => {
   return (
-    <Box w="100%" color="white" h="100vh" >
+    <Box w="100%" color="white" h="100vh" justify="center" align="center" >
       <Flex
         display={{ base: "none", md: "flex" }}
         direction="column"
-        align="center"
         gap="2rem"
-        justify="center"
         h="100%"
       >
         <Flex direction="row" fontSize="3rem">
