@@ -222,6 +222,7 @@ const NavBar = ({ to }) => {
         boxShadow="2px 0 10px rgba(0, 0, 0, 0.5)"
         bgGradient="linear(to-t, #0f0f0f, #111212)"
         w="4rem"
+        bg='green'
       >
         <Flex
           justify='center'
@@ -364,7 +365,7 @@ const NavBar = ({ to }) => {
           </Box>
         </Link>
 
-        <Flex mt="auto" fontSize="18px" justify="center" mb='1rem'>
+        <Flex mt="auto" fontSize="18px" justify="center" mb='2rem' >
           <a
             href="https://www.linkedin.com/in/jeremy-andre-flores/"
             target="top"

@@ -54,7 +54,7 @@ const Home = () => {
       <Flex
         display={{ base: "Flex", md: "none" }}
         direction="column"
-        h="100vh"
+        minH='100vh'
         w="18rem"
         justify="center"
         align="center"
