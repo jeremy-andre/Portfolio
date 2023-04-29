@@ -5,7 +5,7 @@ import { MovingComponent } from "react-moving-text";
 
 const Contact = () => {
   return (
-    <Box w="100%" color="white" h="100%" position='relative'>
+    <Box w="100%" color="white" h="100vh" >
       <Flex
         display={{ base: "none", md: "flex" }}
         direction="column"

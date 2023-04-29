@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <Box position='relative'>
+    <Box>
       <Flex
         display={{ base: "none", md: "flex" }}
         direction="row"
