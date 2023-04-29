@@ -56,7 +56,7 @@ const Home = () => {
         direction="column"
         h='100vh'
         w="18rem"
-        p='2rem'
+        px='2rem'
         justify="center"
         align="center"
         color="#fafafa"
@@ -76,7 +76,7 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 4 }}
         >
-          {/* <Box w="15rem" h="15rem" borderRadius="0.2rem">
+          <Box w="15rem" h="22rem" borderRadius="0.2rem">
             <Image
               w="100%"
               h="100%"
@@ -84,7 +84,7 @@ const Home = () => {
               src="https://bit.ly/dan-abramov"
               alt="Dan Abramov"
             />
-          </Box> */}
+          </Box>
         </motion.div>
         <Box align="center" justify="center" h="7rem" w="15rem" m="2rem" >
           <TextHome />
