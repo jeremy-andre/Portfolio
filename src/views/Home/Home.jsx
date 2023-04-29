@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <Box>
+    <Flex justify='center'>
       <Flex
         display={{ base: "none", md: "flex" }}
         direction="row"
@@ -54,8 +54,10 @@ const Home = () => {
         h='100vh'
         w="18rem"
         px='2rem'
+        pb='3.5rem'
         justify="center"
         align="center"
+        position='fixed'
       >
         <Flex direction="column" m="2rem" justify="center">
           <Heading
@@ -86,7 +88,7 @@ const Home = () => {
           <TextHome />
         </Box>
       </Flex>
-    </Box>
+    </Flex>
   );
 };
 
