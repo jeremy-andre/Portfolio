@@ -62,7 +62,6 @@ const Contact = () => {
         align="center"
         justify="center"
         gap="2rem"
-        h="100vh"
       >
         <Flex direction="row" fontSize="2rem">
           {"CONTACTAME".split("").map((letter, index) => (
