@@ -55,8 +55,7 @@ const Home = () => {
         display={{ base: "Flex", md: "none" }}
         direction="column"
         h="100vh"
-        w="15rem"
-        bg="blue"
+        w="18rem"
         justify="center"
         align="center"
         color="#fafafa"
@@ -64,16 +63,11 @@ const Home = () => {
         <Flex direction="column" m="2rem" justify="center">
           <Heading
             align="center"
-            fontSize="40px"
+            fontSize="50px"
             w="15rem"
-            mb="1.5rem"
-            p='1rem'
           >
             Hola! Soy Jeremy
           </Heading>
-          <Box align="center" justify="center" h="7rem" w="15rem" >
-            <TextHome />
-          </Box>
         </Flex>
 
         <motion.div
@@ -81,10 +75,18 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 4 }}
         >
-          <Box w="15rem" h="20rem" borderRadius="0.2rem" p='1rem' bg='green'>
-            <Image w='100%' h='100%' src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
+          <Box w="15rem" h="22rem" borderRadius="0.2rem">
+            <Image
+              w="100%"
+              h="100%"
+              src="https://bit.ly/dan-abramov"
+              alt="Dan Abramov"
+            />
           </Box>
         </motion.div>
+        <Box align="center" justify="center" h="7rem" w="15rem" m="2rem" >
+          <TextHome />
+        </Box>
       </Flex>
     </Box>
   );

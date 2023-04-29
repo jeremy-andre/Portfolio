@@ -364,7 +364,7 @@ const NavBar = ({ to }) => {
           </Box>
         </Link>
 
-        <Flex mt="auto" fontSize="18px" justify="center" >
+        <Flex mt="auto" fontSize="18px" justify="center" mb='1rem'>
           <a
             href="https://www.linkedin.com/in/jeremy-andre-flores/"
             target="top"
