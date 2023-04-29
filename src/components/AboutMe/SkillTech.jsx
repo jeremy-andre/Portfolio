@@ -3,7 +3,7 @@ import IconsTech from "./IconsTech";
 
 const SkillTech = () => {
   return (
-    <Box color="white">
+    <Box >
       <Heading fontWeight="bold" fontSize="3xl" mb="2rem">
         Habilidades Técnicas
       </Heading>

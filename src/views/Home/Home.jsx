@@ -9,11 +9,9 @@ const Home = () => {
         display={{ base: "none", md: "flex" }}
         direction="row"
         w="70rem"
-        // bg="blue"
         justify="space-between"
         align="center"
         h="100vh"
-        color="#fafafa"
       >
         <Flex
           direction="column"

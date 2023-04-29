@@ -1,4 +1,4 @@
-import { FaReact, FaNodeJs, FaEnvelope } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaEnvelope, FaSun, FaMoon } from "react-icons/fa";
 import { TbArrowRampRight2 } from "react-icons/tb";
 import { SiRedux, SiJavascript, SiChakraui, SiExpress, SiSequelize, SiPostgresql, SiMercadopago, SiHtml5, SiCss3 } from "react-icons/si";
 import { AiOutlineEllipsis } from "react-icons/ai";
@@ -22,4 +22,6 @@ export {
   CiLinkedin,
   SiHtml5,
   SiCss3,
+  FaSun,
+  FaMoon,
 };

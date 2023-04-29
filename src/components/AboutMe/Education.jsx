@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Education = () => {
   return (
     <Flex align="center">
-      <Box color="white">
+      <Box >
         <Heading fontSize="3xl" fontWeight="bold" mb="2rem">
           Educación
         </Heading>
@@ -16,7 +16,6 @@ const Education = () => {
           p="1rem"
           m="1rem"
           w={{ base: "100%", md: "30rem" }}
-          color="white"
         >
           <Box as="h3" fontWeight="semibold" lineHeight="tight" isTruncated>
             Bootcamp en Desarrollo Web Full Stack

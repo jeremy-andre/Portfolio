@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
 
 const TextHome = () => {
-  const [textColor, setTextColor] = useState("white");
+  const [textColor, setTextColor] = useState("");
 
   return (
     <Box fontSize={{base:'2.2em', md:"5em"}} color={textColor}>
@@ -39,7 +39,7 @@ const TextHome = () => {
           () => setTextColor("#09aeba"),
           "Programar es mágico!",
           3500,
-          () => setTextColor("white"),
+          () => setTextColor(""),
           // () => setTextSize("35px"),
         ]}
         speed={50}

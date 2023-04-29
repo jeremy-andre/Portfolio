@@ -9,7 +9,7 @@ import {
 
 const SoftSkill = () => {
   return (
-    <Box color="white">
+    <Box >
       <Heading fontWeight="bold" fontSize="3xl" mb="2rem">
         Habilidades Blandas
       </Heading>

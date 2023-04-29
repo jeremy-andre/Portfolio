@@ -7,7 +7,6 @@ const AboutMe = () => {
         w="20rem"
         h="25rem"
         overflow="hidden"
-        color="#fafafa"
         textAlign="justify"
       >
         <Heading fontSize="3xl" fontWeight="bold" mb="2rem">

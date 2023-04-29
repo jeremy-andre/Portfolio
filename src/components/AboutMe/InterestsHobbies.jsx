@@ -35,7 +35,7 @@ const interests = [
 
 const InterestsHobbies = () => {
   return (
-    <Box color="white">
+    <Box >
       <Flex direction="column" align="center" justify="center" m={4}>
         <Heading fontSize="3xl" fontWeight="bold" mb="2rem">
           Intereses y Aficiones

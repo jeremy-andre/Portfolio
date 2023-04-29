@@ -1,30 +1,39 @@
 import { Link, useLocation } from "react-router-dom";
-import { Box, Flex, Text, Avatar, Stack } from "@chakra-ui/react";
+import { Box, Flex, Text, Avatar, Stack, IconButton } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/react";
 import { CiMail } from "react-icons/ci";
 import { MdPermContactCalendar } from "react-icons/md";
 import { IoHome, IoHammerSharp } from "react-icons/io5";
 import { Jeremy } from "../../img";
 import { motion } from "framer-motion";
-import { FaEnvelope, DiGithubBadge, CiLinkedin } from "../../icons";
+import {
+  FaEnvelope,
+  DiGithubBadge,
+  CiLinkedin,
+  FaMoon,
+  FaSun,
+} from "../../icons";
 
 const NavBar = ({ to }) => {
   const location = useLocation();
   const pathname = location.pathname;
 
+  const { colorMode, toggleColorMode } = useColorMode();
+  const isDark = colorMode === "dark";
+
   return (
     <Box>
       <Flex
-        display={{base:'none', md:'flex'}}
+        display={{ base: "none", md: "flex" }}
         direction="column"
         position="fixed"
         py="3rem"
         h="100vh"
         fontSize="20px"
-        color="#fafafa"
-        borderRight="1px"
+        borderRight="0.5px"
         borderColor="black"
         boxShadow="2px 0 10px rgba(0, 0, 0, 0.5)"
-        bgGradient="linear(to-t, #0f0f0f, #111212)"
+        // bgGradient="linear(to-t, #0f0f0f, #111212)"
         w="14rem"
       >
         <Stack
@@ -32,13 +41,20 @@ const NavBar = ({ to }) => {
           gap="0.5rem"
           align="center"
           px="2.5rem"
-          pb="4rem"
+          pb="1rem"
         >
           <Avatar size="lg" name="Jeremy" src={Jeremy} />
           <Text fontSize="18px" w="5rem" textAlign="center">
             JEREMY ANDRE
           </Text>
         </Stack>
+
+        <Flex justify="center" color="#09aeba" align="center" my="1rem">
+          <IconButton
+            icon={isDark ? <FaSun /> : <FaMoon />}
+            onClick={toggleColorMode}
+          />
+        </Flex>
 
         {/*-BROWSERS---------*/}
         <Link to="/">
@@ -207,15 +223,14 @@ const NavBar = ({ to }) => {
         </Flex>
       </Flex>
 
-
-     {/*-MOVIL-------------------------------------------------------------*/}
+      {/*-MOVIL-------------------------------------------------------------*/}
 
       <Flex
-        display={{base:'flex', md:'none'}}
+        display={{ base: "flex", md: "none" }}
         direction="column"
-        position="fixed"  
+        position="fixed"
         pt="4rem"
-        pb='5rem'
+        pb="5rem"
         h="100vh"
         color="#fafafa"
         borderRight="1px"
@@ -224,23 +239,17 @@ const NavBar = ({ to }) => {
         bgGradient="linear(to-t, #0f0f0f, #111212)"
         w="4rem"
       >
-        <Flex
-          justify='center'
-          align="center"
-          pb="4rem"
-        >
+        <Flex justify="center" align="center" pb="4rem">
           <Avatar size="md" name="Jeremy" src={Jeremy} />
         </Flex>
 
         {/*-BROWSERS---------*/}
         <Link to="/">
           <Box position="relative">
-            <motion.div
-              whileTap={{ scale: 0.90 }}
-            >
+            <motion.div whileTap={{ scale: 0.9 }}>
               <Flex
                 color={pathname === "/" && "#09aeba"}
-                justify='center'
+                justify="center"
                 align="center"
                 py="1rem"
                 my="0.5rem"
@@ -268,12 +277,10 @@ const NavBar = ({ to }) => {
 
         <Link to="/about">
           <Box position="relative">
-            <motion.div
-               whileTap={{ scale: 0.90 }}
-            >
+            <motion.div whileTap={{ scale: 0.9 }}>
               <Flex
                 color={pathname === "/about" && "#09aeba"}
-                justify='center'
+                justify="center"
                 align="center"
                 py="1rem"
                 my="0.5rem"
@@ -301,12 +308,10 @@ const NavBar = ({ to }) => {
 
         <Link to="/projects">
           <Box position="relative">
-            <motion.div
-              whileTap={{ scale: 0.90 }}
-            >
+            <motion.div whileTap={{ scale: 0.9 }}>
               <Flex
                 color={pathname === "/projects" && "#09aeba"}
-                justify='center'
+                justify="center"
                 align="center"
                 py="1rem"
                 my="0.5rem"
@@ -334,12 +339,10 @@ const NavBar = ({ to }) => {
 
         <Link to="/contact">
           <Box position="relative">
-            <motion.div
-              whileTap={{ scale: 0.90 }}
-            >
+            <motion.div whileTap={{ scale: 0.9 }}>
               <Flex
                 color={pathname === "/contact" && "#09aeba"}
-                justify='center'
+                justify="center"
                 align="center"
                 py="1rem"
                 my="0.5rem"
@@ -365,7 +368,7 @@ const NavBar = ({ to }) => {
           </Box>
         </Link>
 
-        <Flex mt="auto" fontSize="18px" justify="center" >
+        <Flex mt="auto" fontSize="18px" justify="center">
           <a
             href="https://www.linkedin.com/in/jeremy-andre-flores/"
             target="top"
@@ -387,8 +390,6 @@ const NavBar = ({ to }) => {
         </Flex>
       </Flex>
     </Box>
-
-    
   );
 };
 

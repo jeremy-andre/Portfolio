@@ -11,7 +11,6 @@ const CardProjectP = (props) => {
       borderRadius="lg"
       overflow="hidden"
       boxShadow="0px 5px 5px rgba(0, 0, 0, 0.5)"
-      color="#fafafa"
     >
       <Image
         w="100%"

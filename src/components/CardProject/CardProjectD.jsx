@@ -23,7 +23,6 @@ const CardProject = (props) => {
       borderRadius="lg"
       overflow="hidden"
       boxShadow="0px 5px 5px rgba(0, 0, 0, 0.5)"
-      color="#fafafa"
     >
       <Image w="100%" h="20rem" src={Mix2Pizza} alt="Dan Abramov" />
 
@@ -82,7 +81,7 @@ const CardProject = (props) => {
             </Box>
           </Flex>
 
-          <Text w="14rem" textAlign="justify" fontSize="15px" color="#adadad">
+          <Text w="14rem" textAlign="justify" fontSize="15px" color="#4d4d4d">
             "Mix2Pizza" fue una aplicación que creé como parte de un proyecto
             final para una bootcamp.
           </Text>
