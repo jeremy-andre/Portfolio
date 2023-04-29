@@ -6,7 +6,7 @@ const TextHome = () => {
   const [textColor, setTextColor] = useState("white");
 
   return (
-    <Box fontSize="35px" color={textColor}>
+    <Box fontSize={{base:'2.2em', md:"5em"}} color={textColor}>
       <TypeAnimation
         sequence={[
           // Same string at the start will only be typed once, initially
@@ -43,7 +43,6 @@ const TextHome = () => {
           // () => setTextSize("35px"),
         ]}
         speed={50}
-        style={{ fontSize: "2em" }}
         repeat={Infinity}
         deletionSpeed={80}
       />

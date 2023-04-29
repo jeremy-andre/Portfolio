@@ -10,7 +10,7 @@ function App() {
   return (
     <Flex direction="row" bg='#141414'  minH='100vh' >
       <NavBar />
-      <Flex flex='1' direction='column' ml='14rem' align='center' >
+      <Flex flex='1' direction='column' ml={{base:'4rem', md:'14rem'}} align='center' >
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/projects" element={<Projects />}></Route>
