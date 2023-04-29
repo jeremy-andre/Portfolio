@@ -231,7 +231,7 @@ const NavBar = ({ to }) => {
         </Flex>
       </Flex>
 
-      {/*-MOVIL-------------------------------------------------------------*/}
+      {/*-MOBILE-------------------------------------------------------------*/}
 
       <Flex
         display={{ base: "flex", md: "none" }}
@@ -389,7 +389,7 @@ const NavBar = ({ to }) => {
           </Box>
         </Link>
 
-        <Flex mt="auto" fontSize="18px" justify="center">
+        {/* <Flex mt="auto" fontSize="18px" justify="center">
           <a
             href="https://www.linkedin.com/in/jeremy-andre-flores/"
             target="top"
@@ -398,7 +398,7 @@ const NavBar = ({ to }) => {
               <CiLinkedin color="#0077B5" size="2rem" />
             </motion.div>
           </a>
-          {/* <a href="https://github.com/jeremy-andre" target="blank">
+          <a href="https://github.com/jeremy-andre" target="blank">
             <motion.div whileHover={{ scale: 1.3 }}>
               <DiGithubBadge size="2rem" />
             </motion.div>
@@ -407,8 +407,8 @@ const NavBar = ({ to }) => {
             <motion.div whileHover={{ scale: 1.3 }}>
               <CiMail color="#09aeba" size="2rem" />
             </motion.div>
-          </a> */}
-        </Flex>
+          </a> 
+        </Flex> */}
       </Flex>
     </Box>
   );
