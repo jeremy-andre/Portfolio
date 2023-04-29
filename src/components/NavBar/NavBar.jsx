@@ -214,7 +214,8 @@ const NavBar = ({ to }) => {
         display={{base:'flex', md:'none'}}
         direction="column"
         position="fixed"  
-        py="3rem"
+        pt="4rem"
+        pb='5rem'
         h="100vh"
         color="#fafafa"
         borderRight="1px"
@@ -364,7 +365,7 @@ const NavBar = ({ to }) => {
           </Box>
         </Link>
 
-        <Flex mt="auto" fontSize="18px" justify="center" mb='2rem' >
+        <Flex mt="auto" fontSize="18px" justify="center" >
           <a
             href="https://www.linkedin.com/in/jeremy-andre-flores/"
             target="top"
