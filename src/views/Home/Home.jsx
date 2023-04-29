@@ -54,12 +54,11 @@ const Home = () => {
       <Flex
         display={{ base: "Flex", md: "none" }}
         direction="column"
-        p="2rem"
-        w="5rem"
-        // bg="blue"
+        h="100vh"
+        w="15rem"
+        bg="blue"
         justify="center"
         align="center"
-        h="100vh"
         color="#fafafa"
       >
         <Flex direction="column" m="2rem" justify="center">
@@ -68,6 +67,7 @@ const Home = () => {
             fontSize="40px"
             w="15rem"
             mb="1.5rem"
+            p='1rem'
           >
             Hola! Soy Jeremy
           </Heading>
@@ -81,7 +81,7 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 4 }}
         >
-          <Box w="15rem" h="20rem" borderRadius="0.2rem">
+          <Box w="15rem" h="20rem" borderRadius="0.2rem" p='1rem' bg='green'>
             <Image w='100%' h='100%' src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
           </Box>
         </motion.div>
