@@ -8,7 +8,7 @@ function App() {
 
 
   return (
-    <Flex direction="row" minH='100vh' w='100%'>
+    <Flex direction="row" >
       <NavBar />
         <VStack flex='1' direction='column' ml={{base:'4rem', md:'14rem'}} align='center' >
         <Routes>

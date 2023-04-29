@@ -49,11 +49,19 @@ const NavBar = ({ to }) => {
           </Text>
         </Stack>
 
-        <Flex justify="center" color="#09aeba" align="center" my="1rem">
-          <IconButton
-            icon={isDark ? <FaSun /> : <FaMoon />}
-            onClick={toggleColorMode}
-          />
+        <Flex
+          justify="center"
+          color="#09aeba"
+          align="center"
+          my="1rem"
+        >
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1 }}>
+            <IconButton
+              bg="transparent"
+              icon={isDark ? <FaSun /> : <FaMoon />}
+              onClick={toggleColorMode}
+            />
+          </motion.div>
         </Flex>
 
         {/*-BROWSERS---------*/}
@@ -232,15 +240,28 @@ const NavBar = ({ to }) => {
         pt="4rem"
         pb="5rem"
         h="100vh"
-        color="#fafafa"
-        borderRight="1px"
+        borderRight="0.5px"
         borderColor="black"
         boxShadow="2px 0 10px rgba(0, 0, 0, 0.5)"
-        bgGradient="linear(to-t, #0f0f0f, #111212)"
         w="4rem"
       >
-        <Flex justify="center" align="center" pb="4rem">
+        <Flex justify="center" align="center" pb="1rem">
           <Avatar size="md" name="Jeremy" src={Jeremy} />
+        </Flex>
+
+        <Flex
+          justify="center"
+          color="#09aeba"
+          align="center"
+          my="1rem"
+        >
+          <motion.div whileHover={{ scale: 1.2 }}>
+            <IconButton
+              bg="transparent"
+              icon={isDark ? <FaSun /> : <FaMoon />}
+              onClick={toggleColorMode}
+            />
+          </motion.div>
         </Flex>
 
         {/*-BROWSERS---------*/}

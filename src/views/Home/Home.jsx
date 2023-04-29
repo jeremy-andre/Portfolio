@@ -56,7 +56,6 @@ const Home = () => {
         px='2rem'
         justify="center"
         align="center"
-        color="#fafafa"
       >
         <Flex direction="column" m="2rem" justify="center">
           <Heading
