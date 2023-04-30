@@ -8,7 +8,7 @@ import { theme } from "./ConfigChakraUi";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <ChakraProvider theme={theme}>
-      <ColorModeScript initialColorMode="dark" />
+      <ColorModeScript initialColorMode="light" />
       <App />
     </ChakraProvider>
   </BrowserRouter>
