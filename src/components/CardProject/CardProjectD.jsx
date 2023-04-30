@@ -22,7 +22,8 @@ const CardProject = (props) => {
       w="40rem"
       borderRadius="lg"
       overflow="hidden"
-      boxShadow="0px 5px 5px rgba(0, 0, 0, 0.5)"
+      boxShadow="2px 2px 10px rgba(0, 0, 0, 0.5)"
+      h='29rem'
     >
       <Image w="100%" h="20rem" src={Mix2Pizza} alt="Dan Abramov" />
 
@@ -82,7 +83,7 @@ const CardProject = (props) => {
           </Flex>
 
           <Text w="14rem" textAlign="justify" fontSize="15px" color="#4d4d4d">
-            "Mix2Pizza" fue una aplicación que creé como parte de un proyecto
+            "Mix2Pizza" fue un e-commerce que creé como parte de un proyecto
             final para una bootcamp.
           </Text>
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>

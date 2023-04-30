@@ -8,10 +8,11 @@ const Projects = () => {
           <CardProjectD titulo="Mix2Pizza" />
           <CardProjectI titulo="Portfolio" />
         </Flex>
-        <Flex direction="row" flexWrap='wrap' gap='2rem' justify='space-between'>
+        <Flex direction="row" flexWrap='wrap' gap='4rem'>
+          <CardProjectF titulo="Countries APP" />
           <CardProjectF titulo="ACA 02" />
           <CardProjectF titulo="ACA 02" />
-          <CardProjectF titulo="ACA 02" />
+
         </Flex>
       </Flex>
   );

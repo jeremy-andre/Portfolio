@@ -4,6 +4,7 @@ import { SiRedux, SiJavascript, SiChakraui, SiExpress, SiSequelize, SiPostgresql
 import { AiOutlineEllipsis } from "react-icons/ai";
 import { DiGithubBadge } from "react-icons/di";
 import { CiLinkedin } from "react-icons/ci";
+import {MdOutlinePhoneAndroid, MdLaptopMac} from "react-icons/md"
 
 export {
   FaReact,
@@ -24,4 +25,6 @@ export {
   SiCss3,
   FaSun,
   FaMoon,
+  MdOutlinePhoneAndroid,
+  MdLaptopMac,
 };

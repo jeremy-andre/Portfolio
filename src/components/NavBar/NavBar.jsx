@@ -1,6 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
-import { Box, Flex, Text, Avatar, Stack, IconButton } from "@chakra-ui/react";
-import { useColorMode } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  Avatar,
+  Stack,
+  IconButton,
+  useColorMode,
+} from "@chakra-ui/react";
 import { CiMail } from "react-icons/ci";
 import { MdPermContactCalendar } from "react-icons/md";
 import { IoHome, IoHammerSharp } from "react-icons/io5";
@@ -13,6 +20,7 @@ import {
   FaMoon,
   FaSun,
 } from "../../icons";
+import { DarkModeButton } from "../DarkModeButton/DarkModeButton";
 
 const NavBar = ({ to }) => {
   const location = useLocation();
@@ -41,7 +49,7 @@ const NavBar = ({ to }) => {
           gap="0.5rem"
           align="center"
           px="2.5rem"
-          pb="1rem"
+          pb="2rem"
         >
           <Avatar size="lg" name="Jeremy" src={Jeremy} />
           <Text fontSize="18px" w="5rem" textAlign="center">
@@ -49,19 +57,8 @@ const NavBar = ({ to }) => {
           </Text>
         </Stack>
 
-        <Flex
-          justify="center"
-          color="#09aeba"
-          align="center"
-          my="1rem"
-        >
-          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1 }}>
-            <IconButton
-              bg="transparent"
-              icon={isDark ? <FaSun /> : <FaMoon />}
-              onClick={toggleColorMode}
-            />
-          </motion.div>
+        <Flex justify="center" color="#09aeba" align="center" my="1rem">
+          <DarkModeButton />
         </Flex>
 
         {/*-BROWSERS---------*/}
@@ -245,22 +242,19 @@ const NavBar = ({ to }) => {
         boxShadow="2px 0 10px rgba(0, 0, 0, 0.5)"
         w="4rem"
       >
-        <Flex justify="center" align="center" pb="1rem">
+        <Flex justify="center" align="center" pb="2rem">
           <Avatar size="md" name="Jeremy" src={Jeremy} />
         </Flex>
 
         <Flex
           justify="center"
-          color="#09aeba"
           align="center"
-          my="1rem"
+          py='1rem'
+          onClick={toggleColorMode}
+          cursor="pointer"
         >
           <motion.div whileHover={{ scale: 1.2 }}>
-            <IconButton
-              bg="transparent"
-              icon={isDark ? <FaSun /> : <FaMoon />}
-              onClick={toggleColorMode}
-            />
+            {isDark ? <FaSun /> : <FaMoon />}
           </motion.div>
         </Flex>
 

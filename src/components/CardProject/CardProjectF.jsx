@@ -10,7 +10,7 @@ const CardProjectP = (props) => {
       w="18rem"
       borderRadius="lg"
       overflow="hidden"
-      boxShadow="0px 5px 5px rgba(0, 0, 0, 0.5)"
+      boxShadow="2px 2px 10px rgba(0, 0, 0, 0.5)"
     >
       <Image
         w="100%"
@@ -43,7 +43,7 @@ const CardProjectP = (props) => {
               lineHeight="tight"
               isTruncated
             >
-              title proyect
+              {titulo}
             </Box>
           </Box>
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>

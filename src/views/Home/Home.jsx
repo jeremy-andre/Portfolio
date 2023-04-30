@@ -9,17 +9,17 @@ const Home = () => {
         display={{ base: "none", md: "flex" }}
         direction="row"
         w="70rem"
-        justify="space-between"
+        justify="space-around"
         align="center"
         h="100vh"
       >
         <Flex
           direction="column"
           h="50%"
-          w="100%"
-          m="2rem"
-          gap="5rem"
+          w="35rem"
+          gap="3.5rem"
           justify="center"
+          align='center'
         >
           <Heading align="center" fontSize="50px" w="30rem">
             Hola! Soy Jeremy
@@ -36,7 +36,7 @@ const Home = () => {
         >
           <Image
             mr="2rem"
-            w="50rem"
+            w="30rem"
             h="40rem"
             borderRadius="1rem"
             // align="center"
