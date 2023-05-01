@@ -1,6 +1,29 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { CardProjectD, CardProjectI, CardProjectF } from "../../components";
 
+const projectsAdvanced = [
+  {
+    title: "P-Services",
+    date: "MAY - 23",
+    pending: true,
+  },
+  {
+    title: "Max-Ideas",
+    date: "JUN - 23",
+    pending: true,
+  },
+  {
+    title: "Countries APP",
+    date: "FEB - 23",
+    pending: false,
+    textos: [
+      "Desarrollé un proyecto individual de países utilizando tecnologías como React-js, Node.js y PostgreSQL.",
+      "El proyecto consistió en una aplicación web que permite buscar información sobre distintos países, como su capital, población, bandera, entre otros datos interesantes. Además, la aplicación permite filtrar y ordenar los países según distintos criterios.",
+      "Este proyecto me permitió mejorar mis habilidades en el desarrollo de aplicaciones web y en la utilización de APIs para obtener información.",
+    ],
+  },
+];
+
 const Projects = () => {
   return (
     <Flex
@@ -10,16 +33,20 @@ const Projects = () => {
       gap="4rem"
       w="70rem"
       p="4rem"
-      
     >
       <Flex direction="row" flexWrap="wrap" justify="space-between">
         <CardProjectD titulo="Mix2Pizza" />
         <CardProjectI titulo="Portfolio" />
       </Flex>
       <Flex direction="row" flexWrap="wrap" gap="4rem">
-        <CardProjectF titulo="P-Services" date="MAY - 23" pending={true} />
-        <CardProjectF titulo="Max-Ideas" date="JUN - 23" pending={true} />
-        <CardProjectF titulo="Countries APP" date="FEB - 23" pending={false} />
+        {projectsAdvanced.map((project) => (
+          <CardProjectF
+            title={project.title}
+            date={project.date}
+            pending={project.pending}
+            textos={project.textos}
+          />
+        ))}
       </Flex>
     </Flex>
   );

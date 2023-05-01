@@ -1,11 +1,16 @@
 import { useState } from "react";
 import { Box, Flex, VStack } from "@chakra-ui/react";
-import { Route, Routes } from "react-router";
+import { Route, Routes, useLocation } from "react-router";
 import { Home, Projects, Contact, About } from "./views/Index";
 import { NavBar } from "./components";
+import { useEffect } from "react";
 
 function App() {
 
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <Flex direction="row" >

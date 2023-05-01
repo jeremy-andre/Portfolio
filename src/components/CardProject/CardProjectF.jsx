@@ -8,21 +8,18 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import { TbArrowRampRight2 } from "react-icons/tb";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const CardProjectP = (props) => {
-  const { titulo, date, pending } = props;
+  const { title, date, pending, textos } = props;
 
   const [showImage, setShowImage] = useState(false);
 
   const handleClick = () => {
     setShowImage(!showImage);
   };
-
-  const { scrollYProgress } = useScroll();
-  
 
   return (
     <Box
@@ -42,7 +39,7 @@ const CardProjectP = (props) => {
           fontSize="1.1rem"
           isTruncated
         >
-          {titulo}
+          {title}
         </Heading>
 
         <Flex direction="column" alignItems="baseline" justify="center" p="2">
@@ -93,29 +90,23 @@ const CardProjectP = (props) => {
               mx="2rem"
               pr="1rem"
               h="20rem"
-              overflowY='scroll'
+              overflowY="scroll"
               // css={{
               //   "&::-webkit-scrollbar": {
               //     width: "1rem",
               //   },
               // }}
             >
-                  <Text fontSize="0.9rem" py="0.5rem" textAlign="justify">
-                    • Desarrollé un proyecto individual de países utilizando
-                    tecnologías como React-js, Node.js y PostgreSQL.
-                  </Text>
-                  <Text fontSize="0.9rem" py="0.5rem" textAlign="justify">
-                    • El proyecto consistió en una aplicación web que permite
-                    buscar información sobre distintos países, como su capital,
-                    población, bandera, entre otros datos interesantes. Además,
-                    la aplicación permite filtrar y ordenar los países según
-                    distintos criterios.
-                  </Text>
-                  <Text fontSize="0.9rem" py="0.5rem" textAlign="justify">
-                    • Este proyecto me permitió mejorar mis habilidades en el
-                    desarrollo de aplicaciones web y en la utilización de APIs
-                    para obtener información.
-                  </Text>
+              {textos?.map((texto, index) => (
+                <Box
+                  key={index}
+                  textAlign="justify"
+                  fontSize="0.9rem"
+                  py="0.5rem"
+                >
+                  {texto}
+                </Box>
+              ))}
             </Flex>
           </motion.div>
         )}
@@ -138,13 +129,15 @@ const CardProjectP = (props) => {
                 boxShadow="2px 2px 10px rgba(0, 0, 0, 0.5)"
                 fontSize="14px"
                 color="#1a1a1a"
-                // isDisabled={titulo === "Upcoming ..." ? true : false}
               >
                 {!showImage ? <Text>Mostrar mas</Text> : <Text>Regresar</Text>}
               </Button>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
-              <Link>
+              <Link
+                to="https://github.com/jeremy-andre/Countries-APP"
+                target="_blank"
+              >
                 <Button
                   rightIcon={<TbArrowRampRight2 />}
                   w="7.5rem"
@@ -157,7 +150,6 @@ const CardProjectP = (props) => {
                   boxShadow="2px 2px 10px rgba(0, 0, 0, 0.5)"
                   fontSize="14px"
                   color="#1a1a1a"
-                  // isDisabled={titulo === "Upcoming ..." ? true : false}
                 >
                   Sitio Web
                 </Button>
@@ -167,7 +159,7 @@ const CardProjectP = (props) => {
         </Box>
       ) : (
         <Flex justify="center" align="center" pt="1.5rem">
-          <Text fontWeight="medium" color="gray" fontSize="1.3rem">
+          <Text fontWeight="medium" color="gray" fontSize="1.3rem" h="4rem">
             Upcoming ...
           </Text>
         </Flex>
