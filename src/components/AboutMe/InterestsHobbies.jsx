@@ -43,7 +43,7 @@ const InterestsHobbies = () => {
         <Flex justify="space-between">
           <Flex flexWrap="wrap" justify="center" w="35rem">
             {interests.map((interest) => (
-              <HobbiesCard interest={interest} />
+              <HobbiesCard key={interest.title} interest={interest} />
             ))}
           </Flex>
           <motion.div whileHover={{ scale: 1.03 }}>

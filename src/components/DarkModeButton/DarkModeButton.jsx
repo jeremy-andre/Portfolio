@@ -17,7 +17,6 @@ export const DarkModeButton = () => {
     <motion.button
       onClick={toggleColorMode}
       variants={buttonVariants}
-      animate={isDark ? "dark" : "light"}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       transition={{ duration: 0.2 }}
@@ -29,7 +28,6 @@ export const DarkModeButton = () => {
       }}
     >
       <motion.div
-        animate={isDark ? "light" : "dark"}
         style={{
           position: "absolute",
           top: "50%",
@@ -41,7 +39,6 @@ export const DarkModeButton = () => {
         <FaMoon color="#1a1a1a" />
       </motion.div>
       <motion.div
-        animate={isDark ? "dark" : "light"}
         style={{
           position: "absolute",
           top: "50%",
