@@ -16,6 +16,7 @@ export const theme = extendTheme({
       },
       "::-webkit-scrollbar": {
         width: "0.4rem",
+        height:"0.4rem",  
         backgroundColor: props.colorMode === "dark" ? "#1a1a1a" : "#dedede",
       },
       "&::-webkit-scrollbar-track": {
