@@ -57,7 +57,7 @@ const Home = () => {
         pb="5rem"
         position="fixed"
       >
-        <Flex flexWrap='wrap' p='1rem' pb='1rem'>
+        <Flex flexWrap='wrap' px='1.5rem' pb='1rem'>
           <Heading  fontSize="40px" textAlign='center'>
             Hola! Soy Jeremy
           </Heading>
@@ -82,7 +82,7 @@ const Home = () => {
           justify="center"
           h="8.5rem"
           py="1rem"
-          px='1rem'
+          px='1.5rem'
         >
           <TextHome />
         </Box>
