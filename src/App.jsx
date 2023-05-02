@@ -4,6 +4,8 @@ import { Route, Routes, useLocation } from "react-router";
 import { Home, Projects, Contact, About } from "./views/Index";
 import { NavBar } from "./components";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
+import { Balls } from "./components/SvgMotion/Lighting";
 
 function App() {
   const { pathname } = useLocation();
@@ -12,9 +14,10 @@ function App() {
   }, [pathname]);
 
   return (
+    // <motion.div>
     <Flex direction="row">
-      <NavBar />
-      <VStack flex='1' direction="column" pl={{base:'3.7rem' ,md:'14rem'}} >
+      <NavBar zIndex="0"/>
+      <VStack flex="1" direction="column" pl={{ base: "3.7rem", md: "14rem" }} >
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/projects" element={<Projects />}></Route>
@@ -23,6 +26,7 @@ function App() {
         </Routes>
       </VStack>
     </Flex>
+    // </motion.div>
   );
 }
 

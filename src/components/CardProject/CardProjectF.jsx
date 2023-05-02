@@ -11,9 +11,10 @@ import { TbArrowRampRight2 } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Creating } from "../SvgMotion/Creating";
 
 const CardProjectP = (props) => {
-  const { title, date, pending, textos } = props;
+  const { title, date, pending, textos, image } = props;
 
   const [showImage, setShowImage] = useState(false);
 
@@ -71,12 +72,20 @@ const CardProjectP = (props) => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <Image
-              w="100%"
-              h="20rem"
-              src="https://bit.ly/dan-abramov"
-              alt="Dan Abramov"
-            />
+            {image ? (
+                <Flex h="20rem" justify="center" align="center">
+                    <Image
+                      w="100%"
+                      maxH="20rem"
+                      src={image}
+                      alt="Dan Abramov"
+                    />
+                </Flex>
+            ) : (
+              <Flex h="20rem" justify="center" align="center">
+                <Creating />
+              </Flex>
+            )}
           </motion.div>
         )}
         {showImage && (

@@ -6,16 +6,19 @@ const projectsAdvanced = [
     title: "P-Services",
     date: "MAY - 23",
     pending: true,
+    image: "",
   },
   {
     title: "Max-Ideas",
     date: "JUN - 23",
     pending: true,
+    image: "",
   },
   {
     title: "Countries APP",
     date: "FEB - 23",
     pending: false,
+    image: "https://res.cloudinary.com/dzxiqsg9i/image/upload/v1683025983/Portfolio/Henry_Countries_a_skjnei.png",
     textos: [
       "Desarrollé un proyecto individual de países utilizando tecnologías como React-js, Node.js y PostgreSQL.",
       "El proyecto consistió en una aplicación web que permite buscar información sobre distintos países, como su capital, población, bandera, entre otros datos interesantes. Además, la aplicación permite filtrar y ordenar los países según distintos criterios.",
@@ -45,6 +48,7 @@ const Projects = () => {
             date={project.date}
             pending={project.pending}
             textos={project.textos}
+            image={project.image}
           />
         ))}
       </Flex>

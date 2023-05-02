@@ -1,6 +1,7 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Highlight, Image, Text } from "@chakra-ui/react";
 import TextHome from "../../components/TextHome/TextHome";
 import { motion } from "framer-motion";
+import { Balls } from "../../components/SvgMotion/Lighting";
 
 const Home = () => {
   return (
@@ -13,6 +14,8 @@ const Home = () => {
         align="center"
         h="100vh"
       >
+        <Balls color="#09aeba" />
+        {/* <Balls color="yellow" espejo="scaleX(-1)"/> */}
         <Flex
           direction="column"
           h="50%"
@@ -22,7 +25,15 @@ const Home = () => {
           align="center"
         >
           <Heading align="center" fontSize="50px" w="30rem">
-            Hola! Soy Jeremy
+            <Highlight
+              query="Jeremy"
+              styles={{
+                color: "#09aeba",
+                WebkitBackgroundClip: "text",
+              }}
+            >
+              Hola! Soy Jeremy
+            </Highlight>
           </Heading>
           <Box align="center" h="15rem" w="30rem">
             <TextHome />
@@ -36,11 +47,10 @@ const Home = () => {
         >
           <Image
             mr="2rem"
-            w="30rem"
-            h="40rem"
-            borderRadius="1rem"
-            // align="center"
-            src="https://bit.ly/dan-abramov"
+            // boxShadow="0px 15px 25px rgba(0, 0, 0, 0.2)"
+            borderRadius="2rem"
+            maxH="40rem"
+            src="https://res.cloudinary.com/dzxiqsg9i/image/upload/c_crop,h_1600,o_100/v1683000049/Portfolio/Home_-_Jeremy_rclv54.png"
             alt="Dan Abramov"
           />
         </motion.div>
@@ -57,8 +67,8 @@ const Home = () => {
         pb="5rem"
         position="fixed"
       >
-        <Flex flexWrap='wrap' px='1.5rem' pb='1rem'>
-          <Heading  fontSize="40px" textAlign='center'>
+        <Flex flexWrap="wrap" px="1.5rem" pb="1rem">
+          <Heading fontSize="40px" textAlign="center">
             Hola! Soy Jeremy
           </Heading>
         </Flex>
@@ -66,24 +76,20 @@ const Home = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 4 }}
+          transition={{ duration: 1.5 }}
         >
-          <Box borderRadius="0.2rem" py="1rem">
+          <Box pb="1rem" maxH="30rem" overflow="hidden" px="2rem">
             <Image
-              px="1.5rem"
+              boxShadow="0px 15px 25px rgba(0, 0, 0, 0.2)"
+              borderRadius="2rem"
+              maxH="30rem"
               objectFit="cover"
-              src="https://bit.ly/dan-abramov"
+              src="https://res.cloudinary.com/dzxiqsg9i/image/upload/c_crop,h_1600,o_100/v1683000049/Portfolio/Home_-_Jeremy_rclv54.png"
               alt="Dan Abramov"
             />
           </Box>
         </motion.div>
-        <Box
-          align="center"
-          justify="center"
-          h="8.5rem"
-          py="1rem"
-          px='1.5rem'
-        >
+        <Box align="center" justify="center" h="8.5rem" py="1rem" px="1.5rem">
           <TextHome />
         </Box>
       </Flex>
