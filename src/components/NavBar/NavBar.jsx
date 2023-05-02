@@ -233,14 +233,14 @@ const NavBar = ({ to }) => {
       <Flex
         display={{ base: "flex", md: "none" }}
         direction="column"
-        position="fixed"
         pt="4rem"
+        px='0.3rem'
         pb="5rem"
         h="100vh"
         borderRight="0.5px"
         borderColor="black"
         boxShadow="2px 0 10px rgba(0, 0, 0, 0.5)"
-        w="4rem"
+        position="fixed"
       >
         <Flex justify="center" align="center" pb="2rem">
           <Avatar size="md" name="Jeremy" src={Jeremy} />

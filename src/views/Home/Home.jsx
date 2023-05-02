@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <Flex justify='center'>
+    <Flex justify="center">
       <Flex
         display={{ base: "none", md: "flex" }}
         direction="row"
@@ -19,7 +19,7 @@ const Home = () => {
           w="35rem"
           gap="3.5rem"
           justify="center"
-          align='center'
+          align="center"
         >
           <Heading align="center" fontSize="50px" w="30rem">
             Hola! Soy Jeremy
@@ -51,21 +51,18 @@ const Home = () => {
       <Flex
         display={{ base: "Flex", md: "none" }}
         direction="column"
-        h='100vh'
-        w="18rem"
-        px='2rem'
-        pb='3.5rem'
+        h="100vh"
         justify="center"
         align="center"
-        position='fixed'
+        pb="5rem"
+        position="fixed"
       >
-        <Flex direction="column" m="2rem" justify="center">
-          <Heading
-            align="center"
-            fontSize="50px"
-            w="15rem"
-          >
-            Hola! Soy Jeremy
+        <Flex direction="column" justify="center">
+          <Heading align="center" fontSize="35px" >
+            Hola! Soy
+          </Heading>
+          <Heading align="center" fontSize="45px" pb="1rem">
+            Jeremy
           </Heading>
         </Flex>
 
@@ -74,17 +71,25 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 4 }}
         >
-          <Box w="14rem" h="22rem" borderRadius="0.2rem">
+          <Box borderRadius="0.2rem" py="1rem">
             <Image
-              w="100%"
-              h="100%"
-              objectFit='cover'
+              maxW="14rem"
+              maxH="22rem"
+              px="1.5rem"
+              objectFit="cover"
               src="https://bit.ly/dan-abramov"
               alt="Dan Abramov"
             />
           </Box>
         </motion.div>
-        <Box align="center" justify="center" h="7rem" w="15rem" m="2rem" >
+        <Box
+          align="center"
+          justify="center"
+          maxW="14rem"
+          h="8.5rem"
+          py="1rem"
+          position="relative"
+        >
           <TextHome />
         </Box>
       </Flex>

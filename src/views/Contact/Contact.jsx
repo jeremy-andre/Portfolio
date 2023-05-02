@@ -82,11 +82,11 @@ const Contact = () => {
             </MovingComponent>
           ))}
         </Flex>
-        <Text mx="4rem" textAlign="center">
+        <Text mx="2rem" textAlign="center">
           Si estás interesado en trabajar conmigo, ¡no dudes en ponerte en
           contacto!
         </Text>
-        <Flex align="center" justify="center" h="5rem" gap="1rem">
+        <Flex align="center" justify="center" h="5rem" gap="1rem" flexWrap='wrap'>
           <a
             href="https://www.linkedin.com/in/jeremy-andre-flores/"
             target="top"

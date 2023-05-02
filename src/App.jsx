@@ -6,16 +6,15 @@ import { NavBar } from "./components";
 import { useEffect } from "react";
 
 function App() {
-
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
   return (
-    <Flex direction="row" >
+    <Flex direction="row">
       <NavBar />
-        <VStack flex='1' direction='column' ml={{base:'4rem', md:'14rem'}} align='center' >
+      <VStack flex='1' direction="column" pl={{base:'3.7rem' ,md:'14rem'}} >
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/projects" element={<Projects />}></Route>
