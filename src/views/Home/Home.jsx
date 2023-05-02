@@ -57,12 +57,9 @@ const Home = () => {
         pb="5rem"
         position="fixed"
       >
-        <Flex direction="column" justify="center">
-          <Heading align="center" fontSize="35px" >
-            Hola! Soy
-          </Heading>
-          <Heading align="center" fontSize="45px" pb="1rem">
-            Jeremy
+        <Flex flexWrap='wrap' p='1rem' pb='1rem'>
+          <Heading  fontSize="40px" textAlign='center'>
+            Hola! Soy Jeremy
           </Heading>
         </Flex>
 
@@ -73,8 +70,6 @@ const Home = () => {
         >
           <Box borderRadius="0.2rem" py="1rem">
             <Image
-              maxW="14rem"
-              maxH="22rem"
               px="1.5rem"
               objectFit="cover"
               src="https://bit.ly/dan-abramov"
@@ -85,10 +80,9 @@ const Home = () => {
         <Box
           align="center"
           justify="center"
-          maxW="14rem"
           h="8.5rem"
           py="1rem"
-          position="relative"
+          px='1rem'
         >
           <TextHome />
         </Box>
