@@ -1,5 +1,4 @@
 import { Flex, Box, Image, Text, Badge, Button } from "@chakra-ui/react";
-import { Mix2Pizza } from "../../img";
 import { Link } from "react-router-dom";
 import {
   FaReact,
@@ -40,7 +39,7 @@ const CardProject = (props) => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <Image w="100%" h="20rem" src={Mix2Pizza} alt="Dan Abramov" />
+            <Image w="100%" h="20rem" src='https://res.cloudinary.com/dzxiqsg9i/image/upload/v1683026218/Portfolio/Mix2Pizza-Landing_dqog5w.png' alt="Dan Abramov" />
           </motion.div>
         )}
         {showImage && (

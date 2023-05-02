@@ -11,7 +11,6 @@ import {
 import { CiMail } from "react-icons/ci";
 import { MdPermContactCalendar } from "react-icons/md";
 import { IoHome, IoHammerSharp } from "react-icons/io5";
-import { Jeremy } from "../../img";
 import { motion } from "framer-motion";
 import {
   FaEnvelope,
@@ -51,7 +50,7 @@ const NavBar = ({ to }) => {
           px="2.5rem"
           pb="2rem"
         >
-          <Avatar size="lg" name="Jeremy" src={Jeremy} />
+          <Avatar size="lg" name="Jeremy" src='https://res.cloudinary.com/dzxiqsg9i/image/upload/v1683026361/Portfolio/Jeremy_xz24jx.jpg' />
           <Text fontSize="18px" w="5rem" textAlign="center">
             JEREMY ANDRE
           </Text>
@@ -243,7 +242,7 @@ const NavBar = ({ to }) => {
         position="fixed"
       >
         <Flex justify="center" align="center" pb="2rem">
-          <Avatar size="md" name="Jeremy" src={Jeremy} />
+          <Avatar size="md" name="Jeremy" src='https://res.cloudinary.com/dzxiqsg9i/image/upload/v1683026361/Portfolio/Jeremy_xz24jx.jpg' />
         </Flex>
 
         <Flex
