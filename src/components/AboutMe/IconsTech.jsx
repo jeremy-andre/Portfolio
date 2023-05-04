@@ -21,11 +21,11 @@ const IconsTech = (props) => {
       p={2}
       borderRadius="md"
       boxShadow="2px 2px 10px rgba(0, 0, 0, 0.5)"
-      w='10rem'
+      w={{base:'7rem',md:'10rem'}}
       justify='space-between'
       gap='2'
     >
-      <Box >
+      <Box display={{base:'none', md:'flex'}} >
         {name.toLowerCase() === "javascript" && <SiJavascript color="#F7DF1E" size="2.5rem" />}
         {name.toLowerCase() === "html5" && <SiHtml5 color="#E44D26" size="2.5rem" />}
         {name.toLowerCase() === "css3" && <SiCss3 color="#1572B6" size="2.5rem" />}
@@ -37,7 +37,19 @@ const IconsTech = (props) => {
         {name.toLowerCase() === "sequelize" && <SiSequelize color="#828282" size="2.5rem" />}
         {name.toLowerCase() === "postgresql" && <SiPostgresql color="#336791" size="2.5rem" />}
       </Box>
-      <Flex justify='center' fontWeight="medium" fontSize="1rem" flex='1'>
+      <Box display={{base:'flex', md:'none'}} >
+        {name.toLowerCase() === "javascript" && <SiJavascript color="#F7DF1E" size="2rem" />}
+        {name.toLowerCase() === "html5" && <SiHtml5 color="#E44D26"  size="2rem" />}
+        {name.toLowerCase() === "css3" && <SiCss3 color="#1572B6"  size="2rem" />}
+        {name.toLowerCase() === "react" && <FaReact color="#61dafb"  size="2rem" />}
+        {name.toLowerCase() === "react-redux" && <SiRedux color="#764ABC"  size="2rem" />}
+        {name.toLowerCase() === "chakra ui" && <SiChakraui color="#319795"  size="2rem"/>}
+        {name.toLowerCase() === "node.js" && <FaNodeJs color="#339933"  size="2rem" />}
+        {name.toLowerCase() === "express" && <SiExpress  size="2rem" />}
+        {name.toLowerCase() === "sequelize" && <SiSequelize color="#828282"  size="2rem" />}
+        {name.toLowerCase() === "postgresql" && <SiPostgresql color="#336791" size="2rem" />}
+      </Box>
+      <Flex justify='center' fontWeight="medium" fontSize={{base:'0.7rem', md:'1rem'}} flex='1'>
         {name}
       </Flex>
     </Flex>

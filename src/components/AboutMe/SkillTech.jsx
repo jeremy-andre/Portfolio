@@ -1,10 +1,16 @@
-import { Box, Heading, Flex, Text } from "@chakra-ui/react";
+import { Box, Heading, Flex, Text, Divider } from "@chakra-ui/react";
 import IconsTech from "./IconsTech";
+import { motion } from "framer-motion";
 
 const SkillTech = () => {
   return (
-    <Box >
-      <Heading fontWeight="bold" fontSize="3xl" mb="2rem">
+    <Flex direction="column" w="100%" p="1rem">
+      <Heading
+        fontSize="3xl"
+        fontWeight="bold"
+        mb={{ base: "1rem", md: "1.5rem", lg: "2rem", xl: "2rem" }}
+        textAlign={{ base: "center", md: "justify" }}
+      >
         Habilidades Técnicas
       </Heading>
       <Flex
@@ -15,57 +21,189 @@ const SkillTech = () => {
         gap="0.2rem"
         flexWrap="wrap"
       >
-        <Flex justify="space-between" align="center" mb="1rem">
-          <Heading as="h2" fontSize="xl" w="18.5rem">
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          justify="space-between"
+          align="center"
+        >
+          <Heading
+            as="h2"
+            fontSize="xl"
+            justify="space-between"
+            w={{ base: "15rem", md: "13rem", lg: "18.5rem" }}
+            textAlign={{ base: "center", md: "initial" }}
+            mb={{ base: "1rem", md: "0rem" }}
+          >
             Lenguajes de Programación
           </Heading>
-          <Flex flex="1" gap="0.5rem">
+          <Flex
+            gap="0.5rem"
+            flexWrap="wrap"
+            justify={{ base: "center", md: "flex-end" }}
+            flex="1"
+          >
             <IconsTech name="Javascript" />
             <IconsTech name="HTML5" />
             <IconsTech name="CSS3" />
             <IconsTech name="Node.js" />
           </Flex>
         </Flex>
-
-        <Flex justify="space-between" align="center" mb="1rem">
-          <Heading as="h2" fontSize="xl" w="18.5rem">
+        <motion.div
+          animate={{
+            width: ["50%", "100%", "70%", "96%", "85%", "91%", "50%"],
+          }}
+          transition={{ duration: 20, repeat: Infinity }}
+        >
+          <Divider
+            my={{ base: "1rem", md: "2rem" }}
+            style={{
+              backgroundImage: "linear-gradient(to right, #09aeba,currentcolor, #43d99d)",
+              height: "4px",
+            }}
+          />
+        </motion.div>
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          justify="space-between"
+          align="center"
+        >
+          <Heading
+            as="h2"
+            fontSize="xl"
+            justify="space-between"
+            w={{ base: "15rem", md: "13rem", lg: "18.5rem" }}
+            textAlign={{ base: "center", md: "initial" }}
+            mb={{ base: "1rem", md: "0rem" }}
+          >
             Frameworks
           </Heading>
-          <Flex flex="1" gap="0.5rem">
+          <Flex
+            gap="0.5rem"
+            flexWrap="wrap"
+            justify={{ base: "center", md: "flex-end" }}
+            flex="1"
+          >
             <IconsTech name="React" />
             <IconsTech name="Express" />
           </Flex>
         </Flex>
-
-        <Flex justify="space-between" align="center" mb="1rem">
-          <Heading as="h2" fontSize="xl" w="18.5rem">
+        <motion.div
+          animate={{
+            width: ["40%", "100%", "73%", "85%", "71%", "96%", "40%"],
+          }}
+          transition={{ duration: 20, repeat: Infinity, delay: 1 }}
+        >
+          <Divider
+            my={{ base: "1rem", md: "2rem" }}
+            style={{
+              backgroundImage: "linear-gradient(to right, #09aeba,currentcolor, #43d99d)",
+              height: "4px",
+            }}
+          />
+        </motion.div>
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          justify="space-between"
+          align="center"
+        >
+          <Heading
+            as="h2"
+            fontSize="xl"
+            justify="space-between"
+            w={{ base: "15rem", md: "13rem", lg: "18.5rem" }}
+            textAlign={{ base: "center", md: "initial" }}
+            mb={{ base: "1rem", md: "0rem" }}
+          >
             Librerías
           </Heading>
-          <Flex flex="1" gap="0.5rem">
+          <Flex
+            gap="0.5rem"
+            flexWrap="wrap"
+            justify={{ base: "center", md: "flex-end" }}
+            flex="1"
+          >
             <IconsTech name="React-Redux" />
             <IconsTech name="Chakra UI" />
           </Flex>
         </Flex>
-
-        <Flex justify="space-between" align="center" mb="1rem">
-          <Heading as="h2" fontSize="xl" w="18.5rem">
+        <motion.div
+          animate={{
+            width: ["30%", "100%", "79%", "97%", "82%", "99%", "30%"],
+          }}
+          transition={{ duration: 20, repeat: Infinity, delay: 2 }}
+        >
+          <Divider
+            my={{ base: "1rem", md: "2rem" }}
+            style={{
+              backgroundImage: "linear-gradient(to right, #09aeba,currentcolor, #43d99d)",
+              height: "4px",
+            }}
+          />
+        </motion.div>
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          justify="space-between"
+          align="center"
+        >
+          <Heading
+            as="h2"
+            fontSize="xl"
+            justify="space-between"
+            w={{ base: "15rem", md: "13rem", lg: "18.5rem" }}
+            textAlign={{ base: "center", md: "initial" }}
+            mb={{ base: "1rem", md: "0rem" }}
+          >
             Data Base
           </Heading>
-          <Flex flex="1" gap="0.5rem">
+          <Flex
+            gap="0.5rem"
+            flexWrap="wrap"
+            justify={{ base: "center", md: "flex-end" }}
+            flex="1"
+          >
             <IconsTech name="PostgreSQL" />
           </Flex>
         </Flex>
-
-        <Flex justify="space-between" align="center" mb="1rem">
-          <Heading as="h2" fontSize="xl" w="18.5rem">
+        <motion.div
+          animate={{
+            width: ["20%", "100%", "89%", "93%", "71%", "96%", "20%"],
+          }}
+          transition={{ duration: 20, repeat: Infinity, delay: 3 }}
+        >
+          <Divider
+            my={{ base: "1rem", md: "2rem" }}
+            style={{
+              backgroundImage: "linear-gradient(to right, #09aeba,currentcolor, #43d99d)",
+              height: "4px",
+            }}
+          />
+        </motion.div>
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          justify="space-between"
+          align="center"
+        >
+          <Heading
+            as="h2"
+            fontSize="xl"
+            justify="space-between"
+            w={{ base: "15rem", md: "13rem", lg: "18.5rem" }}
+            textAlign={{ base: "center", md: "initial" }}
+            mb={{ base: "1rem", md: "0rem" }}
+          >
             ORM
           </Heading>
-          <Flex flex="1" gap="0.5rem">
+          <Flex
+            gap="0.5rem"
+            flexWrap="wrap"
+            justify={{ base: "center", md: "flex-end" }}
+            flex="1"
+          >
             <IconsTech name="Sequelize" />
           </Flex>
         </Flex>
       </Flex>
-    </Box>
+    </Flex>
   );
 };
 

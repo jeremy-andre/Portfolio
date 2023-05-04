@@ -7,6 +7,7 @@ import {
   Stack,
   IconButton,
   useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { CiMail } from "react-icons/ci";
 import { MdPermContactCalendar } from "react-icons/md";
@@ -31,27 +32,27 @@ const NavBar = ({ to }) => {
   return (
     <Box>
       <Flex
-        display={{ base: "none", md: "flex" }}
+        display={{ base: "none", md: "none", lg: "Flex", xl: "Flex" }}
         direction="column"
         position="fixed"
         py="3rem"
-        h="100vh"
-        fontSize="20px"
+        h="100%"
+        fontSize={{ lg: "16px ", xl: "20px" }}
         borderRight="0.5px"
         borderColor="black"
         boxShadow="2px 0 10px rgba(0, 0, 0, 0.5)"
         // bgGradient="linear(to-t, #0f0f0f, #111212)"
-        w="14rem"
+        w={{ lg: "10rem", xl: "14rem" }}
       >
         <Stack
           direction="row"
           gap="0.5rem"
           align="center"
-          px="2.5rem"
+          px={{ lg: "1.5rem", xl: "2.5rem" }}
           pb="2rem"
         >
-          <Avatar size="lg" name="Jeremy" src='https://res.cloudinary.com/dzxiqsg9i/image/upload/v1683026361/Portfolio/Jeremy_xz24jx.jpg' />
-          <Text fontSize="18px" w="5rem" textAlign="center">
+          <Avatar size={{ lg: "md", xl: "lg" }} name="Jeremy" src='https://res.cloudinary.com/dzxiqsg9i/image/upload/v1683026361/Portfolio/Jeremy_xz24jx.jpg' />
+          <Text fontSize={{ lg: "14px", xl: "18px" }} w="5rem" textAlign="center">
             JEREMY ANDRE
           </Text>
         </Stack>
@@ -71,11 +72,11 @@ const NavBar = ({ to }) => {
                 color={pathname === "/" && "#09aeba"}
                 align="center"
                 gap="1rem"
-                px="2.5rem"
+                px={{ lg: "1.8rem", xl: "2.5rem" }}
                 py="0.5rem"
                 my="1rem"
               >
-                <IoHome size="1.4rem" />
+                <IoHome size='1.4rem' />
                 <Text>Home</Text>
               </Flex>
             </motion.div>
@@ -107,7 +108,7 @@ const NavBar = ({ to }) => {
                 color={pathname === "/about" && "#09aeba"}
                 align="center"
                 gap="1rem"
-                px="2.5rem"
+                px={{ lg: "1.8rem", xl: "2.5rem" }}
                 py="0.5rem"
                 my="1rem"
               >
@@ -143,7 +144,7 @@ const NavBar = ({ to }) => {
                 color={pathname === "/projects" && "#09aeba"}
                 align="center"
                 gap="1rem"
-                px="2.5rem"
+                px={{ lg: "1.8rem", xl: "2.5rem" }}
                 py="0.5rem"
                 my="1rem"
               >
@@ -179,7 +180,7 @@ const NavBar = ({ to }) => {
                 color={pathname === "/contact" && "#09aeba"}
                 align="center"
                 gap="1rem"
-                px="2.5rem"
+                px={{ lg: "1.8rem", xl: "2.5rem" }}
                 py="0.5rem"
                 my="1rem"
               >
@@ -205,7 +206,7 @@ const NavBar = ({ to }) => {
           </Box>
         </Link>
 
-        <Flex mt="auto" fontSize="18px" gap="1rem" justify="center">
+        <Flex mt="auto"  gap={{ lg: "0.5rem", xl: "1rem" }} justify="center">
           <a
             href="https://www.linkedin.com/in/jeremy-andre-flores/"
             target="top"
@@ -230,16 +231,18 @@ const NavBar = ({ to }) => {
       {/*-MOBILE-------------------------------------------------------------*/}
 
       <Flex
-        display={{ base: "flex", md: "none" }}
+        display={{ base: "Flex", md: "Flex", lg: "none", xl: "none" }}
         direction="column"
         pt="4rem"
         px='0.3rem'
         pb="5rem"
-        h="100vh"
+        h="100%"
         borderRight="0.5px"
         borderColor="black"
         boxShadow="2px 0 10px rgba(0, 0, 0, 0.5)"
         position="fixed"
+        zIndex="1"
+        bg={useColorModeValue("#dedede", "#1a1a1a")}
       >
         <Flex justify="center" align="center" pb="2rem">
           <Avatar size="md" name="Jeremy" src='https://res.cloudinary.com/dzxiqsg9i/image/upload/v1683026361/Portfolio/Jeremy_xz24jx.jpg' />
@@ -382,7 +385,7 @@ const NavBar = ({ to }) => {
           </Box>
         </Link>
 
-        <Flex mt="auto" fontSize="18px" justify="center">
+        <Flex mt="auto" pt='1rem' fontSize="18px" justify="center">
           <a
             href="https://www.linkedin.com/in/jeremy-andre-flores/"
             target="top"

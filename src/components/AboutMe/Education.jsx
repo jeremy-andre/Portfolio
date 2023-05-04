@@ -1,12 +1,23 @@
-import { Box, Flex, Heading, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Education = () => {
   return (
-    <Flex align="center">
-      <Box >
-        <Heading fontSize="3xl" fontWeight="bold" mb="2rem">
+    <Flex
+      direction={{ base: "column", md: "row" }}
+      justify={{ base: "center", md: "space-between" }}
+      align="center"
+      gap="2rem"
+      p="1rem"
+    >
+      <Box flex="1">
+        <Heading
+          fontSize="3xl"
+          fontWeight="bold"
+          textAlign={{ base: "center", md: "justify" }}
+          mb={{ base: "3rem", md: "2rem", lg: "2rem", xl: "2rem" }}
+        >
           Educación
         </Heading>
         <Box
@@ -14,36 +25,51 @@ const Education = () => {
           borderRadius="lg"
           overflow="hidden"
           p="1rem"
-          m="1rem"
-          w={{ base: "100%", md: "30rem" }}
         >
-          <Box as="h3" fontWeight="semibold" lineHeight="tight" isTruncated>
+          <Text
+            as="h3"
+            fontWeight="semibold"
+            lineHeight="tight"
+            fontSize={{ base: "xs", md: "sm", lg: "md", xl: "lg" }}
+          >
             Bootcamp en Desarrollo Web Full Stack
-          </Box>
-          <Box as="p" color="gray.500" fontSize="sm">
+          </Text>
+          <Text
+            as="p"
+            color="gray.500"
+            fontSize={{ base: "xs", md: "sm", lg: "md", xl: "lg" }}
+          >
             Henry - Buenos Aires, Argentina | Noviembre 2022 - Abril 2023
-          </Box>
-          <Box as="p" mt={4} textAlign="justify">
+          </Text>
+          <Text
+            as="p"
+            mt={4}
+            textAlign="justify"
+            fontSize={{ base: "xs", md: "sm", lg: "md", xl: "lg" }}
+          >
             En el bootcamp de Desarrollo Web Full Stack en Henry, aprendí los
             fundamentos de programación, la arquitectura cliente-servidor, el
             manejo de bases de datos, el desarrollo de aplicaciones web
             utilizando el stack PERN (PostgreSQL, Express.js, React.js, Node.js)
             y más.
-          </Box>
+          </Text>
         </Box>
       </Box>
-      <motion.div whileHover={{ scale: 1.05 }}>
-        <Link to='https://certificates.soyhenry.com/new-cert?id=09ebe93359f480de9787a4d27708d2298c6846e073ee03ae84ef7fa6f82009f8' target='_blank'>
-          <Flex w="25rem" h="17rem" ml="4.5rem" bg="green">
+
+      <Flex w={{ base: "100%", md: "40%", lg: "40%", xl: "40%" }}>
+        <motion.div whileHover={{ scale: 1.05 }}>
+          <Link
+            to="https://certificates.soyhenry.com/new-cert?id=09ebe93359f480de9787a4d27708d2298c6846e073ee03ae84ef7fa6f82009f8"
+            target="_blank"
+          >
             <Image
               src="https://res.cloudinary.com/dzxiqsg9i/image/upload/v1682724198/Portfolio/Certificado_png_fcnkzs.png"
               alt="Certificado Henry"
-              h="100%"
-              w="100%"
+              w="100rem "
             />
-          </Flex>
-        </Link>
-      </motion.div>
+          </Link>
+        </motion.div>
+      </Flex>
     </Flex>
   );
 };

@@ -16,8 +16,12 @@ function App() {
   return (
     // <motion.div>
     <Flex direction="row">
-      <NavBar zIndex="0"/>
-      <VStack flex="1" direction="column" pl={{ base: "3.7rem", md: "14rem" }} >
+      <NavBar zIndex="0" />
+      <VStack
+        flex="1"
+        direction="column"
+        pl={{ base: "3.7rem", md: "3.7rem", lg: "10rem", xl: "14rem" }}
+      >
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/projects" element={<Projects />}></Route>

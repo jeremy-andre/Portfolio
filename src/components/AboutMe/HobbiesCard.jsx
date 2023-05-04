@@ -26,18 +26,16 @@ const HobbiesCard = ({ interest }) => {
             bgGradient={interest.bgGradient}
             boxShadow="2px 2px 10px rgba(0, 0, 0, 0.5)"
             borderRadius="md"
-            w={64}
-            h={48}
+            w={{ base: "100%", md: "12rem", lg: "14rem", xl: "16rem" }}
+            h={{ base: "11rem", md: "11rem", lg: "11.5rem", xl: "12rem" }}
             p={4}
-            mx={2}
-            my={4}
             cursor="pointer"
             overflow="hidden"
           >
-            <Heading as="h3" size="md" mb="1rem" color="#09aeba">
+            <Heading  fontSize={{ base: "0.9rem", md: "0.9rem", lg: "1.1rem", xl: "1.3rem" }} mb="1rem" color="#09aeba">
               {interest.title}
             </Heading>
-            <Text textAlign="justify">{interest.description}</Text>
+            <Text textAlign="justify" fontSize={{ base: "0.8rem", md: "0.8rem", lg:"0.9rem", xl: "1rem" }} >{interest.description}</Text>
           </Box>
         </motion.div>
       )}
@@ -53,10 +51,8 @@ const HobbiesCard = ({ interest }) => {
             bgGradient={interest.bgGradient}
             boxShadow="2px 2px 10px rgba(0, 0, 0, 0.5)"
             borderRadius="md"
-            w={64}
-            h={48}
-            mx={2}
-            my={4}
+            w={{ base: "100%", md: "12rem", lg: "14rem", xl: "16rem" }}
+            h={{ base: "11rem", md: "11rem", lg: "11.5rem", xl: "12rem" }}
             cursor="pointer"
             overflow="hidden"
           >

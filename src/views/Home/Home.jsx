@@ -5,7 +5,7 @@ import { Balls } from "../../components/SvgMotion/Lighting";
 
 const Home = () => {
   return (
-    <Flex justify="center">
+    <Flex justify="center" minW='16rem'>
       <Flex
         display={{ base: "none", md: "flex" }}
         direction="row"
@@ -14,7 +14,7 @@ const Home = () => {
         align="center"
         h="100vh"
       >
-        <Balls color="#09aeba" />
+        <Balls color="#09aeba" w="1000pt" />
         {/* <Balls color="yellow" espejo="scaleX(-1)"/> */}
         <Flex
           direction="column"
@@ -48,7 +48,7 @@ const Home = () => {
           <Image
             mr="2rem"
             // boxShadow="0px 15px 25px rgba(0, 0, 0, 0.2)"
-            borderRadius="2rem"
+            borderRadius="1rem"
             maxH="40rem"
             src="https://res.cloudinary.com/dzxiqsg9i/image/upload/c_crop,h_1600,o_100/v1683000049/Portfolio/Home_-_Jeremy_rclv54.png"
             alt="Dan Abramov"
@@ -57,16 +57,16 @@ const Home = () => {
       </Flex>
 
       {/*-MOVIL-------------------------------------------------------------*/}
-
       <Flex
         display={{ base: "Flex", md: "none" }}
         direction="column"
         h="100vh"
         justify="center"
         align="center"
-        pb="5rem"
+        pb="2rem"
         position="fixed"
       >
+        <Balls color="#09aeba" />
         <Flex flexWrap="wrap" px="1.5rem" pb="1rem">
           <Heading fontSize="40px" textAlign="center">
             Hola! Soy Jeremy
@@ -80,8 +80,8 @@ const Home = () => {
         >
           <Box pb="1rem" maxH="30rem" overflow="hidden" px="2rem">
             <Image
-              boxShadow="0px 15px 25px rgba(0, 0, 0, 0.2)"
-              borderRadius="2rem"
+              // boxShadow="0px 10px 10px rgba(0, 0, 0, 0.2)"
+              borderRadius="0.5rem"
               maxH="30rem"
               objectFit="cover"
               src="https://res.cloudinary.com/dzxiqsg9i/image/upload/c_crop,h_1600,o_100/v1683000049/Portfolio/Home_-_Jeremy_rclv54.png"
@@ -89,7 +89,14 @@ const Home = () => {
             />
           </Box>
         </motion.div>
-        <Box align="center" justify="center" h="8.5rem" py="1rem" px="1.5rem">
+        <Box
+          align="center"
+          justify="center"
+          px="1.5rem"
+          my="0.5rem"
+          h="7rem"
+          w="100%"
+        >
           <TextHome />
         </Box>
       </Flex>

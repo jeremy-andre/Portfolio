@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Box } from "@chakra-ui/react";
 
 export const Balls = (props) => {
-  const { color, espejo } = props;
-  console.log(color);
+  const { color, espejo, w } = props;
+
   return (
-    <Box position="fixed" zIndex="-1" transform={espejo}>
+    <Box zIndex="-1" position="absolute" transform={espejo}>
       <motion.div
         animate={{
           opacity: [0, 1, 0],
@@ -17,15 +17,16 @@ export const Balls = (props) => {
           id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
-          width="1000pt"
-          height="1600pt"
+          height="100vh"
+          w="100vw"
+
           viewBox="0 0 1957.47 1677.029"
         >
           <motion.path
-             opacity="1"
-             fill="none"
-             stroke={color}
-             strokeWidth="0.8"
+            opacity="1"
+            fill="none"
+            stroke={color}
+            strokeWidth="0.8"
             initial={{ pathLength: 0, pathOffset: 1 }}
             animate={{ pathLength: 1, pathOffset: 0 }}
             transition={{ duration: 30, repeat: Infinity }}
