@@ -50,7 +50,7 @@ const SkillTech = () => {
         </Flex>
         <motion.div
           animate={{
-            width: ["50%", "100%", "70%", "96%", "85%", "91%", "50%"],
+            width: ["50%", "100%", "60%", "96%", "80%", "69%", "50%"],
           }}
           transition={{ duration: 20, repeat: Infinity }}
         >
@@ -89,7 +89,7 @@ const SkillTech = () => {
         </Flex>
         <motion.div
           animate={{
-            width: ["40%", "100%", "73%", "85%", "71%", "96%", "40%"],
+            width: ["40%", "100%", "73%", "95%", "61%", "96%", "40%"],
           }}
           transition={{ duration: 20, repeat: Infinity, delay: 1 }}
         >
@@ -128,7 +128,7 @@ const SkillTech = () => {
         </Flex>
         <motion.div
           animate={{
-            width: ["30%", "100%", "79%", "97%", "82%", "99%", "30%"],
+            width: ["30%", "100%", "79%", "97%", "62%", "99%", "30%"],
           }}
           transition={{ duration: 20, repeat: Infinity, delay: 2 }}
         >
@@ -166,7 +166,7 @@ const SkillTech = () => {
         </Flex>
         <motion.div
           animate={{
-            width: ["20%", "100%", "89%", "93%", "71%", "96%", "20%"],
+            width: ["20%", "100%", "79%", "93%", "61%", "96%", "20%"],
           }}
           transition={{ duration: 20, repeat: Infinity, delay: 3 }}
         >
