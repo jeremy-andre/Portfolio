@@ -14,10 +14,10 @@ const About = () => {
       justify="center"
       align="center"
       m={{ base: "1rem", md: "3rem", lg: "4rem", xl: "6rem" }}
-      mt={{ base: "2.5rem", md: "0rem" }}
-      mb={{ base: "2.5rem", md: "0rem" }}
+      mt={{ base: "2.5rem", md: "2.5rem" }}
+      mb={{ base: "2.5rem", md: "2.5rem" }}
       maxW={{ base: "25rem", md: "none", lg: "none", xl: "65rem" }}
-      minW="25rem"
+      minW="16rem"
       gap={{ base: "2rem", md: "3rem", lg: "4rem", xl: "5rem" }}
     >
       <AboutMe />

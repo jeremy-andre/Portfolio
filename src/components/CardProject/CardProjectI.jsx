@@ -21,16 +21,21 @@ import { motion } from "framer-motion";
 const CardProjectI = (props) => {
   const { titulo } = props;
   return (
-    <Box w="18rem" overflow="hidden">
+    <Box w="18rem" overflow="hidden" h="29rem">
       <Flex direction="column" h="9rem" gap="1rem">
         <Flex w="100%" align="center">
           <Heading
             w="100%"
             px="3"
-            mt="1"  
+            mt="1"
             fontWeight="bold"
             lineHeight="tight"
-            fontSize="1.8rem"
+            fontSize={{
+              base: "1.2rem",
+              md: "1.4rem",
+              lg: "1.6rem",
+              xl: "1.8rem",
+            }}
             isTruncated
           >
             {titulo}
@@ -53,7 +58,12 @@ const CardProjectI = (props) => {
             </Box>
           </Flex>
         </Flex>
-        <Flex direction="column" px="1rem" gap="1rem">
+        <Flex
+          direction="column"
+          px="1rem"
+          gap="1rem"
+          fontSize={{ base: "0.8rem", md: "0.8rem", lg: "0.9rem", xl: "1rem" }}
+        >
           <Flex justify="space-between" align="center" h="40px">
             <Text>Modo oscuro</Text>
             <DarkModeButton />

@@ -18,7 +18,8 @@ const projectsAdvanced = [
     title: "Countries APP",
     date: "FEB - 23",
     pending: false,
-    image: "https://res.cloudinary.com/dzxiqsg9i/image/upload/v1683025983/Portfolio/Henry_Countries_a_skjnei.png",
+    image:
+      "https://res.cloudinary.com/dzxiqsg9i/image/upload/v1683025983/Portfolio/Henry_Countries_a_skjnei.png",
     textos: [
       "Desarrollé un proyecto individual de países utilizando tecnologías como React-js, Node.js y PostgreSQL.",
       "El proyecto consistió en una aplicación web que permite buscar información sobre distintos países, como su capital, población, bandera, entre otros datos interesantes. Además, la aplicación permite filtrar y ordenar los países según distintos criterios.",
@@ -32,16 +33,20 @@ const Projects = () => {
     <Flex
       direction="column"
       justify="center"
-      m="2rem"
-      gap="4rem"
-      w="70rem"
-      p="4rem"
+      maxW={{ base: "25rem", md: "none", lg: "none", xl: "65rem" }}
+      m={{ base: "1rem", md: "3rem", lg: "4rem", xl: "6rem" }}
+      mt={{ base: "2.5rem", md: "2.5rem" }}
+      mb={{ base: "2.5rem", md: "2.5rem" }}
     >
-      <Flex direction="row" flexWrap="wrap" justify="space-between">
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        gap="2rem"
+        flexWrap="wrap"
+        justify={{ base: "center", md: "space-around" }}
+        align={{ base: "center", md: "center" }}
+      >
         <CardProjectD titulo="Mix2Pizza" />
         <CardProjectI titulo="Portfolio" />
-      </Flex>
-      <Flex direction="row" flexWrap="wrap" gap="4rem">
         {projectsAdvanced.map((project) => (
           <CardProjectF
             title={project.title}

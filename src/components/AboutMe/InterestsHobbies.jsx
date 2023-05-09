@@ -40,8 +40,11 @@ const InterestsHobbies = () => {
         Intereses y Aficiones
       </Heading>
       <Grid
-        templateColumns={{ base:"repeat(1, 1fr) 1fr", md:"repeat(2, 1fr) 1fr" }}
-        templateRows={{ base:"repeat(1, 1fr) 1fr", md:"repeat(1, 1fr) 1fr" }}
+        templateColumns={{
+          base: "repeat(1, 1fr) 1fr",
+          md: "repeat(2, 1fr) 1fr",
+        }}
+        templateRows={{ base: "repeat(1, 1fr) 1fr", md: "repeat(1, 1fr) 1fr" }}
         gap={4}
       >
         {interests.map((interest) => (
@@ -65,14 +68,42 @@ const InterestsHobbies = () => {
             p={4}
           >
             <motion.div whileHover={{ scale: 1.03 }}>
-              <Heading as="h3" fontSize={{ base: "0.9rem", md: "0.9rem", lg: "1.1rem", xl: "1.3rem" }} mb="1rem" color="#47bdbf" textAlign="center">
+              <Heading
+                as="h3"
+                fontSize={{
+                  base: "0.9rem",
+                  md: "0.9rem",
+                  lg: "1.1rem",
+                  xl: "1.3rem",
+                }}
+                mb="1rem"
+                color="#47bdbf"
+                textAlign="center"
+              >
                 Diseño y construcción de Muebles
               </Heading>
-              <Text textAlign="justify" fontSize={{ base: "0.8rem", md: "0.8rem", lg:"0.9rem", xl: "1rem" }} mb="4">
+              <Text
+                textAlign="justify"
+                fontSize={{
+                  base: "0.8rem",
+                  md: "0.8rem",
+                  lg: "0.9rem",
+                  xl: "1rem",
+                }}
+                mb="4"
+              >
                 Me dedico al diseño y construcción de muebles desde la
                 conceptualización del proyecto hasta su finalización.
               </Text>
-              <Text textAlign="justify" fontSize={{ base: "0.8rem", md: "0.8rem", lg:"0.9rem", xl: "1rem" }}>
+              <Text
+                textAlign="justify"
+                fontSize={{
+                  base: "0.8rem",
+                  md: "0.8rem",
+                  lg: "0.9rem",
+                  xl: "1rem",
+                }}
+              >
                 Me enfoco en crear piezas únicas y personalizadas que reflejen
                 la personalidad y estilo de quien las adquiere, disfruto cada
                 etapa del proceso y me esfuerzo por crear muebles que sean tanto

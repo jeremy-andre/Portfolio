@@ -32,10 +32,10 @@ const HobbiesCard = ({ interest }) => {
             cursor="pointer"
             overflow="hidden"
           >
-            <Heading  fontSize={{ base: "0.9rem", md: "0.9rem", lg: "1.1rem", xl: "1.3rem" }} mb="1rem" color="#09aeba">
+            <Heading  fontSize={{ base: "0.8rem", md: "0.9rem", lg: "1.1rem", xl: "1.3rem" }} mb="1rem" color="#09aeba">
               {interest.title}
             </Heading>
-            <Text textAlign="justify" fontSize={{ base: "0.8rem", md: "0.8rem", lg:"0.9rem", xl: "1rem" }} >{interest.description}</Text>
+            <Text textAlign="justify" fontSize={{ base: "0.68rem", md: "0.8rem", lg:"0.9rem", xl: "1rem" }} >{interest.description}</Text>
           </Box>
         </motion.div>
       )}
