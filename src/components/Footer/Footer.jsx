@@ -11,7 +11,7 @@ function Footer() {
       bgGradient="linear(to-r, #0c0d0d, #1a1a1a, #1a1a1a, #1a1a1a, #1a1a1a, #1a1a1a, #1a1a1a, #1a1a1a, #1a1a1a, #1a1a1a, #0c0d0d)"
     >
       <Flex justify="center" align="center">
-        <Text textAlign='center' fontSize="sm" color="gray.400" fontStyle="italic">
+        <Text textAlign='center' fontSize="sm" color="gray.400" fontStyle="italic" px='1rem'>
           "A maior glória em viver não está em nunca cair, mas em nos
           levantarmos cada vez que caímos."
         </Text>
