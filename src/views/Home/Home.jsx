@@ -2,17 +2,17 @@ import { Box, Flex, Heading, Highlight, Image, Text } from "@chakra-ui/react";
 import TextHome from "../../components/TextHome/TextHome";
 import { motion } from "framer-motion";
 import { Balls } from "../../components/SvgMotion/Lighting";
+import { AboutMe, Education } from "../../components";
 
 const Home = () => {
   return (
-    <Flex justify="center" minW='16rem'>
+    <Flex direction="column" justify="center" w="75%" maxW="80rem">
       <Flex
         display={{ base: "none", md: "flex" }}
         direction="row"
-        w="70rem"
-        justify="space-around"
+        justify="center"
         align="center"
-        h="100vh"
+        py="5rem"
       >
         <Balls color="#09aeba" w="1000pt" />
         {/* <Balls color="yellow" espejo="scaleX(-1)"/> */}
@@ -49,7 +49,7 @@ const Home = () => {
             mr="2rem"
             // boxShadow="0px 15px 25px rgba(0, 0, 0, 0.2)"
             borderRadius="1rem"
-            maxH="40rem"
+            maxH="35rem"
             src="https://res.cloudinary.com/dzxiqsg9i/image/upload/c_crop,h_1600,o_100/v1683000049/Portfolio/Home_-_Jeremy_rclv54.png"
             alt="Dan Abramov"
           />
@@ -60,13 +60,10 @@ const Home = () => {
       <Flex
         display={{ base: "Flex", md: "none" }}
         direction="column"
-        h="100vh"
         justify="center"
         align="center"
-        pb="2rem"
-        position="fixed"
+        pt="6rem"
       >
-        <Balls color="#09aeba" />
         <Flex flexWrap="wrap" px="1.5rem" pb="1rem">
           <Heading fontSize="40px" textAlign="center">
             Hola! Soy Jeremy
@@ -100,6 +97,8 @@ const Home = () => {
           <TextHome />
         </Box>
       </Flex>
+      <AboutMe />
+      <Education />
     </Flex>
   );
 };

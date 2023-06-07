@@ -1,412 +1,172 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link as ReactRouter, useLocation } from "react-router-dom";
 import {
-  Box,
   Flex,
   Text,
+  Link,
   Avatar,
-  Stack,
-  IconButton,
   useColorMode,
-  useColorModeValue,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuDivider,
+  useDisclosure,
 } from "@chakra-ui/react";
-import { CiMail } from "react-icons/ci";
 import { MdPermContactCalendar } from "react-icons/md";
-import { IoHome, IoHammerSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
 import {
-  FaEnvelope,
-  DiGithubBadge,
-  CiLinkedin,
-  FaMoon,
-  FaSun,
+  AiOutlineMenu,
+  IoIosHammer,
+  GiSkills,
+  RiContactsLine,
 } from "../../icons";
-import { DarkModeButton } from "../DarkModeButton/DarkModeButton";
+import { DarkModeButton } from "../AddsMotion/DarkModeButton";
+import BallsLoop from "../AddsMotion/BallsLoop";
+import { useState } from "react";
 
-const NavBar = ({ to }) => {
+const NavBar = () => {
+  const links = [
+    { to: "/about", label: "Skills" },
+    { to: "/projects", label: "Projects" },
+    { to: "/contact", label: "Contact" },
+  ];
+
+  const { isOpen, onClose } = useDisclosure();
+
+  const handleCloseMenu = () => {
+    onClose();
+  };
+
   const location = useLocation();
   const pathname = location.pathname;
 
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
   const isDark = colorMode === "dark";
 
+  const bgGradient = isDark
+    ? "linear(to-r, #0c0d0d, #1a1a1a, #1a1a1a, #1a1a1a, #1a1a1a, #1a1a1a, #1a1a1a, #1a1a1a, #1a1a1a, #1a1a1a, #0c0d0d)"
+    : "linear(to-r, #dedede, #dedede, #dedede, #dedede, #dedede, #dedede, #dedede, #dedede, #dedede, #dedede, #dedede)";
+
   return (
-    <Box>
-      <Flex
-        display={{ base: "none", md: "none", lg: "Flex", xl: "Flex" }}
-        direction="column"
-        position="fixed"
-        py="3rem"
-        h="100%"
-        fontSize={{ lg: "16px ", xl: "20px" }}
-        borderRight="0.5px"
-        borderColor="black"
-        boxShadow="2px 0 10px rgba(0, 0, 0, 0.5)"
-        // bgGradient="linear(to-t, #0f0f0f, #111212)"
-        w={{ lg: "10rem", xl: "14rem" }}
-      >
-        <Stack
-          direction="row"
-          gap="0.5rem"
-          align="center"
-          px={{ lg: "1.5rem", xl: "2.5rem" }}
-          pb="2rem"
-        >
-          <Avatar size={{ lg: "md", xl: "lg" }} name="Jeremy" src='https://res.cloudinary.com/dzxiqsg9i/image/upload/v1683026361/Portfolio/Jeremy_xz24jx.jpg' />
-          <Text fontSize={{ lg: "14px", xl: "18px" }} w="5rem" textAlign="center">
-            JEREMY ANDRE
-          </Text>
-        </Stack>
+    <Flex
+      fontSize="1rem"
+      borderColor="black"
+      boxShadow="2px 0 10px rgba(0, 0, 0, 0.3)"
+      px="1rem"
+      h="4rem"
+      w="100%"
+      bg={isDark ? "rgba(26, 26, 26, 0.93)" : "rgba(222, 222, 222, 0.93)"}
+      zIndex="1"
+      position="fixed"
+    >
+      <Link as={ReactRouter} to="/" _hover="none">
+        <Flex position="relative" h="100%" w="13rem" align="center">
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Flex
+              color={pathname === "/" && "#09aeba"}
+              align="center"
+              gap="1rem"
+              px="1rem"
+            >
+              <Avatar
+                size="md"
+                name="Jeremy"
+                src="https://res.cloudinary.com/dzxiqsg9i/image/upload/v1683026361/Portfolio/Jeremy_xz24jx.jpg"
+              />
 
-        <Flex justify="center" color="#09aeba" align="center" my="1rem">
-          <DarkModeButton />
+              <Text color={pathname === "/" && "#09aeba"}>JEREMY ANDRE</Text>
+            </Flex>
+          </motion.div>
         </Flex>
+      </Link>
 
-        {/*-BROWSERS---------*/}
-        <Link to="/">
-          <Box position="relative">
-            <motion.div
-              whileHover={{ scale: 1.1, x: 20 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Flex
-                color={pathname === "/" && "#09aeba"}
-                align="center"
-                gap="1rem"
-                px={{ lg: "1.8rem", xl: "2.5rem" }}
-                py="0.5rem"
-                my="1rem"
-              >
-                <IoHome size='1.4rem' />
-                <Text>Home</Text>
-              </Flex>
-            </motion.div>
-            {pathname === "/" && (
-              <motion.div
-                initial={{ height: 0 }}
-                animate={{ height: "100%" }}
-                transition={{ duration: 0.3 }}
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  right: 0,
-                  width: "4px",
-                  backgroundColor: "#09aeba",
-                  transform: "translateY(-50%)",
-                }}
-              />
-            )}
-          </Box>
-        </Link>
+      <BallsLoop />
 
-        <Link to="/about">
-          <Box position="relative">
-            <motion.div
-              whileHover={{ scale: 1.1, x: 20 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Flex
-                color={pathname === "/about" && "#09aeba"}
-                align="center"
-                gap="1rem"
-                px={{ lg: "1.8rem", xl: "2.5rem" }}
-                py="0.5rem"
-                my="1rem"
-              >
-                <MdPermContactCalendar size="1.4rem" />
-                <Text>About</Text>
-              </Flex>
-            </motion.div>
-            {pathname === "/about" && (
-              <motion.div
-                initial={{ height: 0 }}
-                animate={{ height: "100%" }}
-                transition={{ duration: 0.3 }}
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  right: 0,
-                  width: "4px",
-                  backgroundColor: "#09aeba",
-                  transform: "translateY(-50%)",
-                }}
-              />
-            )}
-          </Box>
-        </Link>
+      <Flex ml="auto" display={{ base: "flex", lg: "none" }}>
+        <Menu variant="navbar" placement="bottom">
+          <MenuButton px={4}>
+            <AiOutlineMenu size="1.5rem" />
+          </MenuButton>
 
-        <Link to="/projects">
-          <Box position="relative">
-            <motion.div
-              whileHover={{ scale: 1.1, x: 20 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Flex
-                color={pathname === "/projects" && "#09aeba"}
-                align="center"
-                gap="1rem"
-                px={{ lg: "1.8rem", xl: "2.5rem" }}
-                py="0.5rem"
-                my="1rem"
-              >
-                <IoHammerSharp size="1.4rem" />
-                <Text>Projects</Text>
-              </Flex>
-            </motion.div>
-            {pathname === "/projects" && (
-              <motion.div
-                initial={{ height: 0 }}
-                animate={{ height: "100%" }}
-                transition={{ duration: 0.3 }}
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  right: 0,
-                  width: "4px",
-                  backgroundColor: "#09aeba",
-                  transform: "translateY(-50%)",
-                }}
-              />
-            )}
-          </Box>
-        </Link>
-
-        <Link to="/contact">
-          <Box position="relative">
-            <motion.div
-              whileHover={{ scale: 1.1, x: 20 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Flex
-                color={pathname === "/contact" && "#09aeba"}
-                align="center"
-                gap="1rem"
-                px={{ lg: "1.8rem", xl: "2.5rem" }}
-                py="0.5rem"
-                my="1rem"
-              >
-                <FaEnvelope size="1.4rem" />
-                <Text>Contact</Text>
-              </Flex>
-            </motion.div>
-            {pathname === "/contact" && (
-              <motion.div
-                initial={{ height: 0 }}
-                animate={{ height: "100%" }}
-                transition={{ duration: 0.3 }}
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  right: 0,
-                  width: "4px",
-                  backgroundColor: "#09aeba",
-                  transform: "translateY(-50%)",
-                }}
-              />
-            )}
-          </Box>
-        </Link>
-
-        <Flex mt="auto"  gap={{ lg: "0.5rem", xl: "1rem" }} justify="center">
-          <a
-            href="https://www.linkedin.com/in/jeremy-andre-flores/"
-            target="top"
+          <MenuList
+            bg={isDark ? "rgba(26, 26, 26, 0.93)" : "rgba(222, 222, 222, 0.93)"}
+            border="0"
+            w="100vw"
+            boxShadow="2px 0 10px rgba(0, 0, 0, 0.3)"
           >
-            <motion.div whileHover={{ scale: 1.3 }}>
-              <CiLinkedin color="#0077B5" size="2rem" />
-            </motion.div>
-          </a>
-          <a href="https://github.com/jeremy-andre" target="blank">
-            <motion.div whileHover={{ scale: 1.3 }}>
-              <DiGithubBadge size="2rem" />
-            </motion.div>
-          </a>
-          <a href="mailto:jeremy.andre.99@gmail.com">
-            <motion.div whileHover={{ scale: 1.3 }}>
-              <CiMail color="#09aeba" size="2rem" />
-            </motion.div>
-          </a>
+            <Flex direction="column" align="center" justify="center" py="1rem">
+              <DarkModeButton />
+              {links.map((link, index) => (
+                <Link
+                  as={ReactRouter}
+                  key={index}
+                  to={link.to}
+                  w="100%"
+                  _hover="none"
+                >
+                  <MenuItem justifyContent="center" bg="transparent">
+                    <Flex
+                      color={pathname === link.to && "#09aeba"}
+                      p="1.5rem"
+                      gap="6rem"
+                    >
+                      {link.label === "Projects" && <IoIosHammer />}
+                      {link.label === "Skills" && <GiSkills />}
+                      {link.label === "Contact" && <RiContactsLine />}
+                      <Text w="4rem">{link.label}</Text>
+                    </Flex>
+                  </MenuItem>
+                </Link>
+              ))}
+            </Flex>
+          </MenuList>
+        </Menu>
+      </Flex>
+
+      <Flex ml="auto" display={{ base: "none", lg: "flex" }}>
+        {links.map((link, index) => (
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+            <Link as={ReactRouter} key={index} to={link.to} _hover="none">
+              <Flex position="relative" h="100%" align="center">
+                <Flex
+                  color={pathname === link.to && "#09aeba"}
+                  align="center"
+                  justify="center"
+                  gap="1rem"
+                  w="8rem"
+                >
+                  {link.label === "Projects" && <IoIosHammer />}
+                  {link.label === "Skills" && <GiSkills />}
+                  {link.label === "Contact" && <RiContactsLine />}
+                  <Text>{link.label}</Text>
+                </Flex>
+                {pathname === link.to && (
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 0.3 }}
+                    style={{
+                      position: "absolute",
+                      left: "50%",
+                      bottom: 0,
+                      height: "4px",
+                      backgroundColor: "#09aeba",
+                      transform: "translateX(-50%)",
+                    }}
+                  />
+                )}
+              </Flex>
+            </Link>
+          </motion.div>
+        ))}
+
+        <Flex justify="center" align="center" px="0.5rem">
+          <DarkModeButton />
         </Flex>
       </Flex>
 
       {/*-MOBILE-------------------------------------------------------------*/}
-
-      <Flex
-        display={{ base: "Flex", md: "Flex", lg: "none", xl: "none" }}
-        direction="column"
-        pt="4rem"
-        px='0.3rem'
-        pb="5rem"
-        h="100%"
-        borderRight="0.5px"
-        borderColor="black"
-        boxShadow="2px 0 10px rgba(0, 0, 0, 0.5)"
-        position="fixed"
-        zIndex="1"
-        bg={useColorModeValue("#dedede", "#1a1a1a")}
-      >
-        <Flex justify="center" align="center" pb="2rem">
-          <Avatar size="md" name="Jeremy" src='https://res.cloudinary.com/dzxiqsg9i/image/upload/v1683026361/Portfolio/Jeremy_xz24jx.jpg' />
-        </Flex>
-
-        <Flex
-          justify="center"
-          align="center"
-          py='1rem'
-          onClick={toggleColorMode}
-          cursor="pointer"
-        >
-          <motion.div whileHover={{ scale: 1.2 }}>
-            {isDark ? <FaSun /> : <FaMoon />}
-          </motion.div>
-        </Flex>
-
-        {/*-BROWSERS---------*/}
-        <Link to="/">
-          <Box position="relative">
-            <motion.div whileTap={{ scale: 0.9 }}>
-              <Flex
-                color={pathname === "/" && "#09aeba"}
-                justify="center"
-                align="center"
-                py="1rem"
-                my="0.5rem"
-              >
-                <IoHome size="1.4rem" />
-              </Flex>
-            </motion.div>
-            {pathname === "/" && (
-              <motion.div
-                initial={{ height: 0 }}
-                animate={{ height: "100%" }}
-                transition={{ duration: 0.3 }}
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  right: 0,
-                  width: "4px",
-                  backgroundColor: "#09aeba",
-                  transform: "translateY(-50%)",
-                }}
-              />
-            )}
-          </Box>
-        </Link>
-
-        <Link to="/about">
-          <Box position="relative">
-            <motion.div whileTap={{ scale: 0.9 }}>
-              <Flex
-                color={pathname === "/about" && "#09aeba"}
-                justify="center"
-                align="center"
-                py="1rem"
-                my="0.5rem"
-              >
-                <MdPermContactCalendar size="1.4rem" />
-              </Flex>
-            </motion.div>
-            {pathname === "/about" && (
-              <motion.div
-                initial={{ height: 0 }}
-                animate={{ height: "100%" }}
-                transition={{ duration: 0.3 }}
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  right: 0,
-                  width: "4px",
-                  backgroundColor: "#09aeba",
-                  transform: "translateY(-50%)",
-                }}
-              />
-            )}
-          </Box>
-        </Link>
-
-        <Link to="/projects">
-          <Box position="relative">
-            <motion.div whileTap={{ scale: 0.9 }}>
-              <Flex
-                color={pathname === "/projects" && "#09aeba"}
-                justify="center"
-                align="center"
-                py="1rem"
-                my="0.5rem"
-              >
-                <IoHammerSharp size="1.4rem" />
-              </Flex>
-            </motion.div>
-            {pathname === "/projects" && (
-              <motion.div
-                initial={{ height: 0 }}
-                animate={{ height: "100%" }}
-                transition={{ duration: 0.3 }}
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  right: 0,
-                  width: "4px",
-                  backgroundColor: "#09aeba",
-                  transform: "translateY(-50%)",
-                }}
-              />
-            )}
-          </Box>
-        </Link>
-
-        <Link to="/contact">
-          <Box position="relative">
-            <motion.div whileTap={{ scale: 0.9 }}>
-              <Flex
-                color={pathname === "/contact" && "#09aeba"}
-                justify="center"
-                align="center"
-                py="1rem"
-                my="0.5rem"
-              >
-                <FaEnvelope size="1.4rem" />
-              </Flex>
-            </motion.div>
-            {pathname === "/contact" && (
-              <motion.div
-                initial={{ height: 0 }}
-                animate={{ height: "100%" }}
-                transition={{ duration: 0.3 }}
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  right: 0,
-                  width: "4px",
-                  backgroundColor: "#09aeba",
-                  transform: "translateY(-50%)",
-                }}
-              />
-            )}
-          </Box>
-        </Link>
-
-        <Flex mt="auto" pt='1rem' fontSize="18px" justify="center">
-          <a
-            href="https://www.linkedin.com/in/jeremy-andre-flores/"
-            target="top"
-          >
-            <motion.div whileHover={{ scale: 1.3 }}>
-              <CiLinkedin color="#0077B5" size="2rem" />
-            </motion.div>
-          </a>
-          {/* <a href="https://github.com/jeremy-andre" target="blank">
-            <motion.div whileHover={{ scale: 1.3 }}>
-              <DiGithubBadge size="2rem" />
-            </motion.div>
-          </a>
-          <a href="mailto:jeremy.andre.99@gmail.com">
-            <motion.div whileHover={{ scale: 1.3 }}>
-              <CiMail color="#09aeba" size="2rem" />
-            </motion.div>
-          </a> */}
-        </Flex>
-      </Flex>
-    </Box>
+    </Flex>
   );
 };
 

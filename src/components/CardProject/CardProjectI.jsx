@@ -1,6 +1,6 @@
 import { Flex, Text, Box, Badge, Heading, Switch } from "@chakra-ui/react";
 import { FaSun, FaMoon } from "react-icons/fa";
-import { DarkModeButton } from "../DarkModeButton/DarkModeButton";
+import { DarkModeButton } from "../AddsMotion/DarkModeButton";
 import {
   FaReact,
   SiRedux,

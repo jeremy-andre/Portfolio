@@ -53,7 +53,7 @@ export const DarkModeButton = () => {
         variants={buttonVariants}
         animate={isDark ? "slideRight" : "slideLeft"}
         style={{
-          backgroundColor: isDark ? "#dedede" : "#1a1a1a",
+          backgroundColor: isDark ? "#09aeba" : "#09aeba",
           width: "50%",
           height: "100%",
           position: "relative",

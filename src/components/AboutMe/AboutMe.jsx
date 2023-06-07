@@ -7,7 +7,7 @@ const AboutMe = () => {
       flexWrap="wrap"
       justify={{ base: "center", md: "space-between" }}
       align="center"
-      p="1rem"
+      py="2rem"
       gap={{ base: "2rem", md: "3rem" }}
     >
       <Flex

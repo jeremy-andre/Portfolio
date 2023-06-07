@@ -8,8 +8,9 @@ const Education = () => {
       direction={{ base: "column", md: "row" }}
       justify={{ base: "center", md: "space-between" }}
       align="center"
-      gap="2rem"
-      p="1rem"
+      gap={{ base: "4rem", lg: "8rem" }}
+      pb="4rem"
+      pt='2rem'
     >
       <Box flex="1">
         <Heading

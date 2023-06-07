@@ -7,6 +7,8 @@ import Education from "./AboutMe/Education";
 import SkillTech from "./AboutMe/SkillTech";
 import SoftSkill from "./AboutMe/SoftSkill";
 import InterestsHobbies from "./AboutMe/InterestsHobbies";
+import Footer from "./Footer/Footer";
+import SocialIcons from "./Footer/SolcialIcons";
 export {
   NavBar,
   CardProjectD,
@@ -17,4 +19,6 @@ export {
   SkillTech,
   SoftSkill,
   InterestsHobbies,
+  Footer,
+  SocialIcons,
 };

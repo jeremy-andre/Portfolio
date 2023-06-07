@@ -17,10 +17,8 @@ export const Balls = (props) => {
           id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
-          height="100vh"
-          w="100vw"
-
-          viewBox="0 0 1957.47 1677.029"
+		  height='580pt'
+          viewBox="0 0 1980 1600"
         >
           <motion.path
             opacity="1"

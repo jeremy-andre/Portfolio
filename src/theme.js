@@ -1,22 +1,22 @@
 import { extendTheme } from "@chakra-ui/react";
 
-export const theme = extendTheme({
+const theme = extendTheme({
   colors: {
     dark: {
-      background: "#1a1a1a",
+      bg: "#1a1a1a",
     },
     light: {
-      background: "#dedede",
+      bg: "#dedede",
     },
   },
   styles: {
     global: (props) => ({
       body: {
-        bg: props.colorMode === "dark" ? "dark.background" : "light.background",
+        bg: props.colorMode === "dark" ? "dark.bg" : "light.bg",
       },
       "::-webkit-scrollbar": {
         width: "0.4rem",
-        height:"0.4rem",  
+        height: "0.4rem",
         backgroundColor: props.colorMode === "dark" ? "#1a1a1a" : "#dedede",
       },
       "&::-webkit-scrollbar-track": {
@@ -31,3 +31,4 @@ export const theme = extendTheme({
   },
 });
 
+export default theme;
